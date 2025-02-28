@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding:0px;
+    margin:0px;
+    background:#accddd;
+}
+
+/*** PAGE INSCRIPTION ***/
+
+.main {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:25px;
+    margin:0 auto;
+}
+
+.main h2 {
+    background:#319ed3;
+    font-family: montserrat;
+    font-size:1rem;
+    border:0px;
+    font-family: montserrat;
+    color:#fff;
+    padding:15px;
+    border-radius:25px;
+    z-index:2;
+    text-transform: uppercase;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    background:#fff;
+    padding:20px;
+    border-radius:25px;
+    margin-top:-2rem;
+    z-index:1;
+}
+
+label {
+    font-family: montserrat;
+    font-size:1rem;
+    font-weight:500;
+    margin:10px 0px;
+}
+
+input {
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-family: montserrat;
+}
+
+select {
+    background:#fff;
+    font-family: montserrat;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+option {
+    font-family: montserrat;
+    font-size:1rem;
+}
+
+.send button {
+    background:#319ed3;
+    font-family: montserrat;
+    font-size:1rem;
+    border:0px;
+    font-family: montserrat;
+    color:#fff;
+    padding:15px;
+    cursor:pointer;
+    border-radius:25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.check {
+    margin:20px 0px;
+}
+
+.send {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.required, .mail-error, .mdp-error {
+    color:red;
+    font-family: montserrat;
+    font-size:0.8rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-transform: uppercase;
+    margin:0px 0px 10px 0px;
+}
+
+.accept {
+    color:red;
+    font-family: montserrat;
+    font-size:0.8rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-transform: uppercase;
+    margin:0px 0px 10px 0px;
+    background:rgba(255,0,0, 0.4); 
+    padding:10px;
+    border:1px solid rgba(255,0,0, 0.7); 
+    margin:10px 0px;
+    border-radius:15px;
+}
+
+/*** PAGE CONNEXION ***/ 
+
+.connect {
+    margin-top:1.5rem;
+}
+
+.connect button {
+    background:#319ed3;
+    font-family: montserrat;
+    font-size:1rem;
+    border:0px;
+    font-family: montserrat;
+    color:#fff;
+    padding:15px;
+    cursor:pointer;
+    border-radius:25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.connect a {
+    background:#5e9cba;
+    font-family: montserrat;
+    font-size:1rem;
+    border:0px;
+    font-family: montserrat;
+    color:#fff;
+    padding:15px;
+    cursor:pointer;
+    border-radius:25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/*** PAGE CONFIRMATION ***/ 
+
+.co {
+    background:#5e9cba;
+    font-family: montserrat;
+    font-size:1rem;
+    border:0px;
+    font-family: montserrat;
+    color:#fff;
+    padding:15px;
+    cursor:pointer;
+    border-radius:25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+}
+
+form p {
+    font-family: montserrat;
+    font-size:1rem;
+    color:#000;
+}

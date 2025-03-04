@@ -49,6 +49,7 @@
             </div>
             <div class="send">
                 <button type="submit">envoyer</button>
+                <a href="./controller-connexion.php">connexion</a>
             </div>
         </form>
     </div>

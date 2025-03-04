@@ -1,5 +1,7 @@
 <?php
 
+require_once '../../config.php';
+
 // super globale $_GET 
 // var_dump($_GET); 
 
@@ -104,16 +106,20 @@ $genre = ["homme", "femme", "autre"];
     }
 
     if(empty($errors)) {
-        header('Location: controller-confirmation.php'); 
-        exit;
+        // se connecter à la DDB 
+            $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS); 
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+
+            var_dump($pdo);
+
+        // header('Location: controller-confirmation.php'); 
+        // exit;
     }
 
 }
 
-
-
-var_dump($_POST);
-var_dump($errors);
+// var_dump($_POST);
+// var_dump($errors);
 
 include_once '../view/view-inscription.php'; 
 

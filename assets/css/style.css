@@ -90,6 +90,22 @@ option {
     display:flex;
     justify-content: center;
     align-items: center;
+    gap:1rem;
+}
+
+.send a {
+    background:#5e9cba;
+    font-family: montserrat;
+    font-size:1rem;
+    border:0px;
+    font-family: montserrat;
+    color:#fff;
+    padding:15px;
+    cursor:pointer;
+    border-radius:25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .required, .mail-error, .mdp-error {
@@ -105,7 +121,7 @@ option {
 .accept {
     color:red;
     font-family: montserrat;
-    font-size:0.8rem;
+    font-size:0.7rem;
     font-weight: 500;
     line-height: 1rem;
     text-transform: uppercase;

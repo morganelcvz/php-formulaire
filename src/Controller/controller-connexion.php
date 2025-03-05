@@ -1,5 +1,8 @@
 <?php
 
+session_start(); 
+// var_dump($_SESSION);
+
 require_once '../../config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -43,10 +46,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // on compte les résultats, on crée une variable $found qui sera un booleen 
         $stmt->rowCount() == 0 ? $found = false : $found = true;
 
+        // on stock le résultat de la requête dans un tableau associatif 
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
         if ($found == false) {
             $errors['connexion'] = 'identifiant ou mot de passe incorrect';
+        } else { 
+            if(password_verify($_POST['password'], $user['user_password'])){
+                $_SESSION = $user;
+                header('Location: controller-profile.php');
+                exit;
+            } else {
+                $errors['connexion'] = 'identifiant ou mot de passe incorrect';
+            }
         }
-
     }
 }
 

@@ -12,6 +12,10 @@
             <span class="required"><?= $errors['prénom'] ?? '' ?></span>
             <input type="text" id="prénom" name="prénom" value="<?= $_POST['prénom'] ?? '' ?>">
             <br>
+            <label for="pseudo">Pseudo</label>
+            <span class="mail-error"><?= $errors['pseudo'] ?? '' ?></span>
+            <input type="pseudo" id="pseudo" name="pseudo" value="<?= $_POST['pseudo'] ?? '' ?>">
+            <br>
             <label for="email">E-mail</label>
             <span class="mail-error"><?= $errors['email'] ?? '' ?></span>
             <input type="email" id="email" name="email" value="<?= $_POST['email'] ?? '' ?>">

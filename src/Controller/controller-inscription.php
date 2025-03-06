@@ -70,7 +70,7 @@ $regex_pseudo = "/^[a-zA-Z0-9_-]+$/";
 if (isset($_POST['pseudo'])) {
     if (empty($_POST['pseudo'])) {
         $errors['pseudo'] = 'ce champ est obligatoire';
-    } elseif (!preg_match($regex_name, $_POST['pseudo'])) {
+    } elseif (!preg_match($regex_pseudo, $_POST['pseudo'])) {
         $errors['pseudo'] = 'caractère non autorisé';
     } elseif ($found == true){ 
         $errors['pseudo'] = 'ce pseudo est déjà utilisé';

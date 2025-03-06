@@ -1,7 +1,11 @@
 <?php
 
-session_start(); 
-// var_dump($_SESSION);
+session_start();
+
+if(isset($_SESSION['user_id'])){
+    header('Location: controller-profile.php');
+    exit;
+}
 
 require_once '../../config.php';
 
@@ -54,6 +58,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else { 
             if(password_verify($_POST['password'], $user['user_password'])){
                 $_SESSION = $user;
+
+                unset($_SESSION['user_password']);
+                unset($_SESSION['user_activated']);
+
                 header('Location: controller-profile.php');
                 exit;
             } else {

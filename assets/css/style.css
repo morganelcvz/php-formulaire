@@ -191,3 +191,96 @@ form p {
     font-size:1rem;
     color:#000;
 }
+
+
+/*** PAGE PROFIL ****/ 
+
+.profile {
+    background:#fff;
+    padding:15px;
+    border-radius:25px;
+    margin:0 auto;
+    width:50%;
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+
+.profile-top {
+    display:flex;
+    flex-direction:row ;
+    justify-content: space-around;
+}
+
+.profile-top img {
+    width:180px;
+    height:180px;
+    border-radius: 100%;
+}
+
+.info {
+    display:flex;
+    flex-direction: column;
+}
+
+.info button {
+    font-family: montserrat;
+    font-size: 0.9rem;
+    border:0px;
+    text-transform: uppercase;
+    border-radius:20px;
+    color:#000;
+    padding:10px;
+    cursor:pointer;
+}
+
+/***NOM ET BOUTONS***/
+.profile-name {
+    padding:15px 0px;
+}
+
+/***PSEUDO***/ 
+.profile-name span {
+    font-family: montserrat;
+    font-size:1.3rem;
+    color:#000;
+    font-weight:600;
+}
+
+.profile-name button {
+    font-family: montserrat;
+    font-size: 0.9rem;
+    border:0px;
+    text-transform: uppercase;
+    border-radius:20px;
+    color:#000;
+    padding:10px;
+    cursor:pointer;
+}
+
+/***FOLLOWERS & FOLLOWINGS***/
+.profile-stat {
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+}
+
+.profile-stat p {
+    font-family: montserrat;
+    font-size:1rem;
+    color:#000;
+    font-weight:500;
+}
+
+.profile-post {}
+
+.post-row {
+    display:flex;
+    flex-direction: row;
+    gap:0.8rem;
+    margin-top:1rem;
+}
+
+.post-img {
+    width:260px;
+    height:260px;
+}

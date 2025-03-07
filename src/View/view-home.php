@@ -18,7 +18,37 @@
             </div>
         </div>
         <div class="home-posts">
+        <?php foreach ($allPubli as $post) { ?>
             <div class="publication">
+                <div class="top">
+                    <b>pseudonyme</b> <span><?=$post['post_timestamp'];?></span>
+                </div>
+                <img src="/assets/img/users/13/chien.png">
+                <div class="bottom">
+                    <div class="stat">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                    </div>
+                    <div class="desc">
+                        <span>pseudonyme</span>
+                        <p><?= $post['post_description']; ?></p>
+                    </div>
+                    <div class="commentaire">
+                        <span>pseudonyme</span>
+                        <p>C'est une super photo elle est incroyable !</p>
+                    </div>
+                    <div class="add-commentaire">
+                        <input type="text" id="comment" title="comment" name="comment" placeholder="ajouter un commentaire...">
+                        <button type="submit">commenter</button>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+        </div>
+    </section>
+</body>
+
+<!-- <div class="publication">
                 <div class="top">
                     <b>pseudonyme</b> <span>timestamp</span>
                 </div>
@@ -41,9 +71,6 @@
                         <button type="submit">commenter</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-</body>
+            </div> -->
 
 </html>

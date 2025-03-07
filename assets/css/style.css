@@ -1,286 +1,500 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-    padding:0px;
-    margin:0px;
-    background:#accddd;
+  padding: 0px;
+  margin: 0px;
+  background: #accddd;
+  /* PAGE INSCRIPTION */
+  /***PAGE PROFIL INSTA***/
+  /*** FEED AFPAGRAM ***/
 }
-
-/*** PAGE INSCRIPTION ***/
-
-.main {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius:25px;
-    margin:0 auto;
+body .main {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  margin: 0 auto;
+  /* TITRE DU FORM */
+  /* FORMULAIRE */
 }
-
-.main h2 {
-    background:#319ed3;
-    font-family: montserrat;
-    font-size:1rem;
-    border:0px;
-    font-family: montserrat;
-    color:#fff;
-    padding:15px;
-    border-radius:25px;
-    z-index:2;
-    text-transform: uppercase;
+body .main h2 {
+  background: #319ed3;
+  font-family: montserrat;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  border-radius: 25px;
+  z-index: 2;
+  text-transform: uppercase;
 }
-
-form {
-    display:flex;
-    flex-direction: column;
-    background:#fff;
-    padding:20px;
-    border-radius:25px;
-    margin-top:-2rem;
-    z-index:1;
+body .main form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  border-radius: 25px;
+  margin-top: -2rem;
+  z-index: 1;
+  /* MESSAGES D'ERREUR */
+  /* CONDITIONS D'UTILISATION */
+  /* ENVOI DU FORUMULAIRE */
+  /*** PAGE CONNEXION ***/
 }
-
-label {
-    font-family: montserrat;
-    font-size:1rem;
-    font-weight:500;
-    margin:10px 0px;
+body .main form .required,
+body .main form .mail-error,
+body .main form .mdp-error {
+  color: red;
+  font-family: montserrat;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1rem;
+  text-transform: uppercase;
+  margin: 0px 0px 10px 0px;
 }
-
-input {
-    padding:10px;
-    border-radius:10px;
-    border:1px solid #ccc;
-    font-family: montserrat;
+body .main form label {
+  font-family: montserrat;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 10px 0px;
 }
-
-select {
-    background:#fff;
-    font-family: montserrat;
-    padding:10px;
-    border-radius:10px;
-    border:1px solid #ccc;
+body .main form input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: montserrat;
 }
-
-option {
-    font-family: montserrat;
-    font-size:1rem;
+body .main form select {
+  background: #fff;
+  font-family: montserrat;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
-
-.send button {
-    background:#319ed3;
-    font-family: montserrat;
-    font-size:1rem;
-    border:0px;
-    font-family: montserrat;
-    color:#fff;
-    padding:15px;
-    cursor:pointer;
-    border-radius:25px;
-    font-weight: bold;
-    text-transform: uppercase;
+body .main form option {
+  font-family: montserrat;
+  font-size: 1rem;
 }
-
-.check {
-    margin:20px 0px;
+body .main form .check {
+  margin: 20px 0px;
 }
-
-.send {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    gap:1rem;
+body .main form .check .accept {
+  color: red;
+  font-family: montserrat;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1rem;
+  text-transform: uppercase;
+  margin: 0px 0px 10px 0px;
+  background: rgba(255, 0, 0, 0.4);
+  padding: 10px;
+  border: 1px solid rgba(255, 0, 0, 0.7);
+  margin: 10px 0px;
+  border-radius: 15px;
 }
-
-.send a {
-    background:#5e9cba;
-    font-family: montserrat;
-    font-size:1rem;
-    border:0px;
-    font-family: montserrat;
-    color:#fff;
-    padding:15px;
-    cursor:pointer;
-    border-radius:25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
+body .main form .send {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /*ENVOYER*/
+  /*CONNEXION*/
 }
-
-.required, .mail-error, .mdp-error {
-    color:red;
-    font-family: montserrat;
-    font-size:0.8rem;
-    font-weight: 500;
-    line-height: 1rem;
-    text-transform: uppercase;
-    margin:0px 0px 10px 0px;
+body .main form .send button {
+  background: rgb(49, 158, 211);
+  font-size: 1rem;
+  border: 0px;
+  font-family: montserrat;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-
-.accept {
-    color:red;
-    font-family: montserrat;
-    font-size:0.7rem;
-    font-weight: 500;
-    line-height: 1rem;
-    text-transform: uppercase;
-    margin:0px 0px 10px 0px;
-    background:rgba(255,0,0, 0.4); 
-    padding:10px;
-    border:1px solid rgba(255,0,0, 0.7); 
-    margin:10px 0px;
-    border-radius:15px;
+body .main form .send a {
+  background: #5e9cba;
+  font-family: montserrat;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
 }
-
-/*** PAGE CONNEXION ***/ 
-
-.connect {
-    margin-top:1.5rem;
+body .main form .connect {
+  margin-top: 1.5rem;
+  /* SE CONNECTER */
+  /* INSCRIPTION */
 }
-
-.connect button {
-    background:#319ed3;
-    font-family: montserrat;
-    font-size:1rem;
-    border:0px;
-    font-family: montserrat;
-    color:#fff;
-    padding:15px;
-    cursor:pointer;
-    border-radius:25px;
-    font-weight: bold;
-    text-transform: uppercase;
+body .main form .connect button {
+  background: #319ed3;
+  font-family: montserrat;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-
-.connect a {
-    background:#5e9cba;
-    font-family: montserrat;
-    font-size:1rem;
-    border:0px;
-    font-family: montserrat;
-    color:#fff;
-    padding:15px;
-    cursor:pointer;
-    border-radius:25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
+body .main form .connect a {
+  background: #5e9cba;
+  font-family: montserrat;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
 }
-
-/*** PAGE CONFIRMATION ***/ 
-
-.co {
-    background:#5e9cba;
-    font-family: montserrat;
-    font-size:1rem;
-    border:0px;
-    font-family: montserrat;
-    color:#fff;
-    padding:15px;
-    cursor:pointer;
-    border-radius:25px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
+body .main form .co {
+  background: #5e9cba;
+  font-family: montserrat;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
 }
-
-form p {
-    font-family: montserrat;
-    font-size:1rem;
-    color:#000;
+body .main form p {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #000;
 }
-
-
-/*** PAGE PROFIL ****/ 
-
-.profile {
-    background:#fff;
-    padding:15px;
-    border-radius:25px;
-    margin:0 auto;
-    width:50%;
-    margin-top:2rem;
-    margin-bottom:2rem;
+body .profile {
+  background: #fff;
+  padding: 15px;
+  border-radius: 25px;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  /* INFO HAUT DU PROFIL */
+  /* TOUTES LES PHOTOS */
 }
-
-.profile-top {
-    display:flex;
-    flex-direction:row ;
-    justify-content: space-around;
+body .profile .profile-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* PHOTO DE PROFIL */
 }
-
-.profile-top img {
-    width:180px;
-    height:180px;
-    border-radius: 100%;
+body .profile .profile-top img {
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
 }
-
-.info {
-    display:flex;
-    flex-direction: column;
+body .profile .profile-top .info {
+  display: flex;
+  flex-direction: column;
+  /***NOMS & BOUTONS***/
+  /*NOMBRE DE POSTS & FOLLOWERS*/
 }
-
-.info button {
-    font-family: montserrat;
-    font-size: 0.9rem;
-    border:0px;
-    text-transform: uppercase;
-    border-radius:20px;
-    color:#000;
-    padding:10px;
-    cursor:pointer;
+body .profile .profile-top .info button {
+  font-family: montserrat;
+  font-size: 0.9rem;
+  border: 0px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  color: #000;
+  padding: 10px;
+  cursor: pointer;
 }
-
-/***NOM ET BOUTONS***/
-.profile-name {
-    padding:15px 0px;
+body .profile .profile-top .info .profile-name {
+  padding: 15px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* PSEUDO */
 }
-
-/***PSEUDO***/ 
-.profile-name span {
-    font-family: montserrat;
-    font-size:1.3rem;
-    color:#000;
-    font-weight:600;
+body .profile .profile-top .info .profile-name span {
+  font-family: montserrat;
+  font-size: 1.3rem;
+  color: #000;
+  font-weight: 600;
 }
-
-.profile-name button {
-    font-family: montserrat;
-    font-size: 0.9rem;
-    border:0px;
-    text-transform: uppercase;
-    border-radius:20px;
-    color:#000;
-    padding:10px;
-    cursor:pointer;
+body .profile .profile-top .info .profile-name button {
+  font-family: montserrat;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #319ed3;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  text-transform: uppercase;
 }
-
-/***FOLLOWERS & FOLLOWINGS***/
-.profile-stat {
-    display: flex;
-    flex-direction: row;
-    gap:2rem;
+body .profile .profile-top .info .profile-name a {
+  font-family: montserrat;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #5e9cba;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
-
-.profile-stat p {
-    font-family: montserrat;
-    font-size:1rem;
-    color:#000;
-    font-weight:500;
+body .profile .profile-top .info .profile-stat {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
-
-.profile-post {}
-
-.post-row {
-    display:flex;
-    flex-direction: row;
-    gap:0.8rem;
-    margin-top:1rem;
+body .profile .profile-top .info .profile-stat p {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #000;
+  font-weight: 500;
 }
-
-.post-img {
-    width:260px;
-    height:260px;
+body .profile .profile-post {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  /* ROW 3 PHOTOS */
 }
+body .profile .profile-post .post-row {
+  display: flex;
+  flex-wrap: wrap;
+  /* POST PHOTO */
+}
+body .profile .profile-post .post-row .post-img {
+  width: 260px;
+  height: 260px;
+  /* LIKE COMMENTAIRE */
+}
+body .profile .profile-post .post-row .post-img .post-stat {
+  width: 250px;
+  height: 260px;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.7s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+body .profile .profile-post .post-row .post-img .post-stat i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+body .profile .profile-post .post-row .post-img .post-stat:hover {
+  opacity: 1;
+  transition: 0.7s;
+}
+body .home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  /* BARRE DE NAVIGATION */
+  /*** POSTS AFPAGRAM FEED ***/
+}
+body .home-page .nav {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2.5rem;
+}
+body .home-page .nav .nav-home {
+  background: #fff;
+  border-radius: 25px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px 10px 20px;
+  /* TITRE AFPAGRAM */
+  /* LIENS NAVIGATION */
+  /* RECHERCHE NAVIGATION */
+  /* RETOUR PROFIL NAVIGATION */
+}
+body .home-page .nav .nav-home h2 {
+  font-family: montserrat;
+  font-size: 1.8rem;
+  border: 0px;
+  color: #319ed3;
+  text-transform: uppercase;
+  line-height: 1rem;
+  padding: 0px;
+}
+body .home-page .nav .nav-home p {
+  display: flex;
+  gap: 1rem;
+}
+body .home-page .nav .nav-home p a {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+body .home-page .nav .nav-home p i {
+  font-size: 1.1rem;
+}
+body .home-page .nav .nav-home .search {
+  display: flex;
+  gap: 1rem;
+}
+body .home-page .nav .nav-home .nav-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+body .home-page .nav .nav-home .nav-profile img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+}
+body .home-page .nav .nav-home .nav-profile a {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+body .home-page .home-posts {
+  width: 80%;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  /* UN POST */
+}
+body .home-page .home-posts .publication {
+  margin: 2rem 0rem;
+  background: #fff;
+  border-radius: 25px;
+  width: 50%;
+  /* HAUT DU POST */
+  /* IMAGE DU POST*/
+  /* BAS DU POST */
+}
+body .home-page .home-posts .publication .top {
+  padding: 20px 10px;
+  /* PSEUDO POST */
+  /* TIMESTAMP POST */
+}
+body .home-page .home-posts .publication .top b {
+  background: #319ed3;
+  font-family: montserrat;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+  padding: 10px;
+  border-radius: 25px;
+}
+body .home-page .home-posts .publication .top span {
+  font-family: montserrat;
+  color: grey;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+body .home-page .home-posts .publication img {
+  width: 100%;
+}
+body .home-page .home-posts .publication .bottom {
+  padding: 15px;
+  /* LIKE & COMMENTAIRE */
+  /* DESCRIPTION DU POST */
+  /* COMMENTAIRES DU POST */
+}
+body .home-page .home-posts .publication .bottom .stat {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+body .home-page .home-posts .publication .bottom .stat i {
+  font-size: 1.1rem;
+}
+body .home-page .home-posts .publication .bottom .desc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+  /* PSEUDO DESCRIPTION POST */
+  /* DESCRIPTION */
+}
+body .home-page .home-posts .publication .bottom .desc span {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #319ed3;
+  font-weight: 600;
+  text-decoration: none;
+}
+body .home-page .home-posts .publication .bottom .desc p {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #000;
+}
+body .home-page .home-posts .publication .bottom .commentaire {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+  /* PSEUDO COMMENTAIRE */
+  /* COMMENTAIRE */
+}
+body .home-page .home-posts .publication .bottom .commentaire span {
+  font-family: montserrat;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+body .home-page .home-posts .publication .bottom .commentaire p {
+  font-family: montserrat;
+  font-size: 0.9rem;
+  color: grey;
+}
+body .home-page .home-posts .publication .bottom .add-commentaire {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+body .home-page .home-posts .publication .bottom .add-commentaire input {
+  padding: 10px;
+  border: 0px;
+  border-bottom: 1px solid #ccc;
+  width: 400px;
+}
+body .home-page .home-posts .publication .bottom .add-commentaire button {
+  background: #5e9cba;
+  font-family: montserrat;
+  font-size: 0.8rem;
+  border: 0px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */

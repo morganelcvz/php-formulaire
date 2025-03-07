@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #accddd;
+
+    /* PAGE INSCRIPTION */
+    .main {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        margin: 0 auto;
+
+        /* TITRE DU FORM */
+        h2 {
+            background: #319ed3;
+            font-family: montserrat;
+            font-size: 1rem;
+            border: 0px;
+            color: #fff;
+            padding: 15px;
+            border-radius: 25px;
+            z-index: 2;
+            text-transform: uppercase;
+        }
+
+        /* FORMULAIRE */
+        form {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding: 20px;
+            border-radius: 25px;
+            margin-top: -2rem;
+            z-index: 1;
+
+            /* MESSAGES D'ERREUR */
+            .required,
+            .mail-error,
+            .mdp-error {
+                color: red;
+                font-family: montserrat;
+                font-size: 0.8rem;
+                font-weight: 500;
+                line-height: 1rem;
+                text-transform: uppercase;
+                margin: 0px 0px 10px 0px;
+            }
+
+            label {
+                font-family: montserrat;
+                font-size: 1rem;
+                font-weight: 500;
+                margin: 10px 0px;
+            }
+
+            input {
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #ccc;
+                font-family: montserrat;
+            }
+
+            select {
+                background: #fff;
+                font-family: montserrat;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid #ccc;
+            }
+
+            option {
+                font-family: montserrat;
+                font-size: 1rem;
+            }
+
+            /* CONDITIONS D'UTILISATION */
+            .check {
+                margin: 20px 0px;
+
+                .accept {
+                    color: red;
+                    font-family: montserrat;
+                    font-size: 0.7rem;
+                    font-weight: 500;
+                    line-height: 1rem;
+                    text-transform: uppercase;
+                    margin: 0px 0px 10px 0px;
+                    background: rgba(255, 0, 0, 0.4);
+                    padding: 10px;
+                    border: 1px solid rgba(255, 0, 0, 0.7);
+                    margin: 10px 0px;
+                    border-radius: 15px;
+                }
+            }
+
+            /* ENVOI DU FORUMULAIRE */
+            .send {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                /*ENVOYER*/
+                button {
+                    background: rgb(49, 158, 211);
+                    font-size: 1rem;
+                    border: 0px;
+                    font-family: montserrat;
+                    color: rgb(255, 255, 255);
+                    padding: 15px;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                /*CONNEXION*/
+                a {
+                    background: #5e9cba;
+                    font-family: montserrat;
+                    font-size: 1rem;
+                    border: 0px;
+                    color: #fff;
+                    padding: 15px;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+
+            /*** PAGE CONNEXION ***/
+            .connect {
+                margin-top: 1.5rem;
+
+                /* SE CONNECTER */
+                button {
+                    background: #319ed3;
+                    font-family: montserrat;
+                    font-size: 1rem;
+                    border: 0px;
+                    color: #fff;
+                    padding: 15px;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                /* INSCRIPTION */
+                a {
+                    background: #5e9cba;
+                    font-family: montserrat;
+                    font-size: 1rem;
+                    border: 0px;
+                    color: #fff;
+                    padding: 15px;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+
+            .co {
+                background: #5e9cba;
+                font-family: montserrat;
+                font-size: 1rem;
+                border: 0px;
+                color: #fff;
+                padding: 15px;
+                cursor: pointer;
+                border-radius: 25px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            p {
+                font-family: montserrat;
+                font-size: 1rem;
+                color: #000;
+            }
+
+        }
+
+    }
+
+    /***PAGE PROFIL INSTA***/
+    .profile {
+        background: #fff;
+        padding: 15px;
+        border-radius: 25px;
+        margin: 0 auto;
+        width: 50%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        /* INFO HAUT DU PROFIL */
+        .profile-top {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+            /* PHOTO DE PROFIL */
+            img {
+                width: 180px;
+                height: 180px;
+                border-radius: 100%;
+            }
+
+            .info {
+                display: flex;
+                flex-direction: column;
+
+                button {
+                    font-family: montserrat;
+                    font-size: 0.9rem;
+                    border: 0px;
+                    text-transform: uppercase;
+                    border-radius: 20px;
+                    color: #000;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+                /***NOMS & BOUTONS***/
+                .profile-name {
+                    padding: 15px 0px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    /* PSEUDO */
+                    span {
+                        font-family: montserrat;
+                        font-size: 1.3rem;
+                        color: #000;
+                        font-weight: 600;
+                    }
+
+                    button {
+                        font-family: montserrat;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        background: #319ed3;
+                        border: 0px;
+                        color: #fff;
+                        padding: 15px;
+                        cursor: pointer;
+                        border-radius: 25px;
+                        text-transform: uppercase;
+                    }
+
+                    a {
+                        font-family: montserrat;
+                        font-size: 0.8rem;
+                        font-weight: 500;
+                        background: #5e9cba;
+                        border: 0px;
+                        color: #fff;
+                        padding: 15px;
+                        cursor: pointer;
+                        border-radius: 25px;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
+                }
+
+                /*NOMBRE DE POSTS & FOLLOWERS*/
+                .profile-stat {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2rem;
+
+                    p {
+                        font-family: montserrat;
+                        font-size: 1rem;
+                        color: #000;
+                        font-weight: 500;
+                    }
+                }
+
+            }
+        }
+
+        /* TOUTES LES PHOTOS */
+        .profile-post {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+
+            /* ROW 3 PHOTOS */
+            .post-row {
+                display: flex;
+                flex-wrap: wrap;
+
+                /* POST PHOTO */
+                .post-img {
+                    width: 260px;
+                    height: 260px;
+
+                    /* LIKE COMMENTAIRE */
+                    .post-stat {
+                        width: 250px;
+                        height: 260px;
+                        background: rgba(0, 0, 0, 0.5);
+                        opacity: 0;
+                        transition: 0.7s;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+
+                        i {
+                            color: #fff;
+                            font-size: 1.2rem;
+                        }
+
+                        &:hover {
+                            opacity: 1;
+                            transition: 0.7s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /*** FEED AFPAGRAM ***/
+    .home-page {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+
+        /* BARRE DE NAVIGATION */
+        .nav {
+            width:30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top:2.5rem;
+
+        .nav-home {
+            background: #fff;
+            border-radius: 25px;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            padding: 0px 20px 10px 20px;
+
+            /* TITRE AFPAGRAM */
+            h2 {
+                font-family: montserrat;
+                font-size: 1.8rem;
+                border: 0px;
+                color:#319ed3;
+                text-transform: uppercase;
+                line-height: 1rem;
+                padding:0px;
+            }
+
+            /* LIENS NAVIGATION */
+            p {
+                display: flex;
+                gap: 1rem;
+
+                a {
+                    font-family: montserrat;
+                    font-size: 1rem;
+                    color: #000;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+
+                i {
+                    font-size: 1.1rem;
+                }
+
+            }
+
+            /* RECHERCHE NAVIGATION */
+            .search {
+                display: flex;
+                gap: 1rem;
+            }
+
+            /* RETOUR PROFIL NAVIGATION */
+            .nav-profile {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                }
+
+                a {
+                    font-family: montserrat;
+                    font-size: 1rem;
+                    color: #000;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+        }
+
+    }
+
+        /*** POSTS AFPAGRAM FEED ***/
+        .home-posts {
+            width: 80%;
+            height: 100vh;
+            overflow: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+            /* UN POST */ 
+            .publication {
+                margin:2rem 0rem;
+                background: #fff;
+                border-radius: 25px;
+                width: 50%;
+
+                /* HAUT DU POST */
+                .top {
+                    padding: 20px 10px;
+
+                    /* PSEUDO POST */
+                    b {
+                        background: #319ed3;
+                        font-family: montserrat;
+                        font-weight: 600;
+                        font-size: 1rem;
+                        border: 0px;
+                        color: #fff;
+                        padding: 10px;
+                        border-radius: 25px;
+                    }
+
+                    /* TIMESTAMP POST */ 
+                    span {
+                        font-family: montserrat;
+                        color: grey;
+                        font-size: 0.8rem;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                }
+
+                /* IMAGE DU POST*/ 
+                img {
+                    width: 100%;
+                }
+
+                /* BAS DU POST */ 
+                .bottom {
+                    padding:15px;
+
+                    /* LIKE & COMMENTAIRE */ 
+                    .stat {
+                        display: flex;
+                        flex-direction: row;
+                        gap:1rem;
+
+                        i {
+                            font-size: 1.1rem;
+                        }
+
+                    }
+
+                    /* DESCRIPTION DU POST */ 
+                    .desc {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap:0.8rem;
+
+                        /* PSEUDO DESCRIPTION POST */ 
+                        span {
+                            font-family: montserrat;
+                            font-size: 1rem;
+                            color: #319ed3;
+                            font-weight:600;
+                            text-decoration: none;
+                        }
+
+                        /* DESCRIPTION */ 
+                        p {
+                            font-family: montserrat;
+                            font-size: 1rem;
+                            color: #000;
+                        }
+                    }
+
+                    /* COMMENTAIRES DU POST */
+                    .commentaire {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap:0.8rem;
+
+                        /* PSEUDO COMMENTAIRE */
+                        span {
+                            font-family: montserrat;
+                            font-size: 0.9rem;
+                            color:#333;
+                            font-weight: 500;
+                        }
+
+                        /* COMMENTAIRE */ 
+                        p {
+                            font-family: montserrat;
+                            font-size: 0.9rem;
+                            color:grey;
+                        }
+                    }
+
+                    .add-commentaire {
+                        display:flex;
+                        flex-direction: row;
+                        align-items: center;
+                        gap:0.5rem;
+
+                        input {
+                            padding:10px;
+                            border:0px;
+                            border-bottom:1px solid #ccc;
+                            width:400px;
+                        }
+
+                        button {
+                            background: #5e9cba;
+                            font-family: montserrat;
+                            font-size: 0.8rem;
+                            border: 0px;
+                            color: #fff;
+                            padding: 10px;
+                            cursor: pointer;
+                            border-radius: 25px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

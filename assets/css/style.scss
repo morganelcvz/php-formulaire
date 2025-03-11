@@ -200,7 +200,7 @@ body {
         padding: 15px;
         border-radius: 25px;
         margin: 0 auto;
-        width: 50%;
+        width:790px;
         margin-top: 2rem;
         margin-bottom: 2rem;
 
@@ -313,7 +313,7 @@ body {
 
                     /* LIKE COMMENTAIRE */
                     .post-stat {
-                        width: 250px;
+                        width: 260px;
                         height: 260px;
                         background: rgba(0, 0, 0, 0.5);
                         opacity: 0;
@@ -350,83 +350,86 @@ body {
 
         /* BARRE DE NAVIGATION */
         .nav {
-            width:30%;
+            width: 20%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            padding-top:2.5rem;
+            background:#fff;
+            height:100vh;
 
-        .nav-home {
-            background: #fff;
-            border-radius: 25px;
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-            padding: 0px 20px 10px 20px;
-
-            /* TITRE AFPAGRAM */
-            h2 {
-                font-family: montserrat;
-                font-size: 1.8rem;
-                border: 0px;
-                color:#319ed3;
-                text-transform: uppercase;
-                line-height: 1rem;
-                padding:0px;
-            }
-
-            /* LIENS NAVIGATION */
-            p {
+            .nav-home {
                 display: flex;
-                gap: 1rem;
+                flex-direction: column;
+                padding:20px;
+                gap:1rem;
 
-                a {
+                /* TITRE AFPAGRAM */
+                h2 {
                     font-family: montserrat;
-                    font-size: 1rem;
-                    color: #000;
-                    text-decoration: none;
+                    font-size: 2rem;
+                    border: 0px;
+                    color: #319ed3;
                     text-transform: uppercase;
-                    font-weight: 500;
+                    line-height: 1rem;
+                    padding: 0px;
                 }
 
-                i {
-                    font-size: 1.1rem;
+                /* LIENS NAVIGATION */
+                p {
+                    display: flex;
+                    gap: 1rem;
+
+                    a {
+                        font-family: montserrat;
+                        font-size: 1rem;
+                        color: #000;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+
+                    i {
+                        font-size: 1.1rem;
+                    }
+
                 }
 
+                /* RECHERCHE NAVIGATION */
+                .search {
+                    display: flex;
+                    gap: 1rem;
+
+                    input {
+                        padding: 6px;
+                    }
+                }
+
+                /* RETOUR PROFIL NAVIGATION */
+                .nav-profile {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 1rem;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                    }
+
+                    a {
+                        font-family: montserrat;
+                        font-size: 1rem;
+                        color: #000;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+                }
             }
 
-            /* RECHERCHE NAVIGATION */
-            .search {
-                display: flex;
-                gap: 1rem;
-            }
-
-            /* RETOUR PROFIL NAVIGATION */
-            .nav-profile {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 1rem;
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 100%;
-                }
-
-                a {
-                    font-family: montserrat;
-                    font-size: 1rem;
-                    color: #000;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-weight: 500;
-                }
-            }
         }
-
-    }
 
         /*** POSTS AFPAGRAM FEED ***/
         .home-posts {
@@ -438,9 +441,9 @@ body {
             justify-content: flex-start;
             align-items: center;
 
-            /* UN POST */ 
+            /* UN POST */
             .publication {
-                margin:2.3rem 0rem;
+                margin: 2.3rem 0rem;
                 background: #fff;
                 border-radius: 25px;
                 width: 50%;
@@ -461,7 +464,7 @@ body {
                         border-radius: 25px;
                     }
 
-                    /* TIMESTAMP POST */ 
+                    /* TIMESTAMP POST */
                     span {
                         font-family: montserrat;
                         color: grey;
@@ -471,20 +474,20 @@ body {
                     }
                 }
 
-                /* IMAGE DU POST*/ 
+                /* IMAGE DU POST*/
                 img {
                     width: 100%;
                 }
 
-                /* BAS DU POST */ 
+                /* BAS DU POST */
                 .bottom {
-                    padding:15px;
+                    padding: 15px;
 
-                    /* LIKE & COMMENTAIRE */ 
+                    /* LIKE & COMMENTAIRE */
                     .stat {
                         display: flex;
                         flex-direction: row;
-                        gap:1rem;
+                        gap: 1rem;
 
                         i {
                             font-size: 1.1rem;
@@ -492,23 +495,23 @@ body {
 
                     }
 
-                    /* DESCRIPTION DU POST */ 
+                    /* DESCRIPTION DU POST */
                     .desc {
                         display: flex;
                         flex-direction: row;
                         align-items: center;
-                        gap:0.8rem;
+                        gap: 0.8rem;
 
-                        /* PSEUDO DESCRIPTION POST */ 
+                        /* PSEUDO DESCRIPTION POST */
                         span {
                             font-family: montserrat;
                             font-size: 1rem;
                             color: #319ed3;
-                            font-weight:600;
+                            font-weight: 600;
                             text-decoration: none;
                         }
 
-                        /* DESCRIPTION */ 
+                        /* DESCRIPTION */
                         p {
                             font-family: montserrat;
                             font-size: 1rem;
@@ -521,35 +524,35 @@ body {
                         display: flex;
                         flex-direction: row;
                         align-items: center;
-                        gap:0.8rem;
+                        gap: 0.8rem;
 
                         /* PSEUDO COMMENTAIRE */
                         span {
                             font-family: montserrat;
                             font-size: 0.9rem;
-                            color:#333;
+                            color: #333;
                             font-weight: 500;
                         }
 
-                        /* COMMENTAIRE */ 
+                        /* COMMENTAIRE */
                         p {
                             font-family: montserrat;
                             font-size: 0.9rem;
-                            color:grey;
+                            color: grey;
                         }
                     }
 
                     .add-commentaire {
-                        display:flex;
+                        display: flex;
                         flex-direction: row;
                         align-items: center;
-                        gap:0.5rem;
+                        gap: 0.5rem;
 
                         input {
-                            padding:10px;
-                            border:0px;
-                            border-bottom:1px solid #ccc;
-                            width:400px;
+                            padding: 10px;
+                            border: 0px;
+                            border-bottom: 1px solid #ccc;
+                            width:100%;
                         }
 
                         button {
@@ -566,6 +569,137 @@ body {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    /*** PAGE CREATION ***/ 
+    .creation {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        margin: 0 auto;
+
+        /* TITRE DU FORM */
+        h2 {
+            background: #319ed3;
+            font-family: montserrat;
+            font-size: 1rem;
+            border: 0px;
+            color: #fff;
+            padding: 15px;
+            border-radius: 25px;
+            z-index: 2;
+            text-transform: uppercase;
+        }
+ 
+        form {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding: 20px;
+            border-radius: 25px;
+            margin-top: -2rem;
+            z-index: 1;
+
+            .add-photo {
+                padding:10px 0px;
+                display:flex;
+                flex-direction: column;
+
+                label {
+                    font-family: montserrat;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin: 10px 0px;
+                }
+
+                input {
+                    font-family: montserrat;
+                    font-size: 1rem;
+                }
+
+                button {
+                    border-radius:25px;
+                }
+
+                .invalid-feedback {
+                    color: red;
+                    font-family: montserrat;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    line-height: 1rem;
+                    text-transform: uppercase;
+                    padding:10px 0px;
+                }
+
+            }
+
+            .add-comment {
+                display:flex;
+                flex-direction: column;
+
+
+                label {
+                    font-family: montserrat;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin: 10px 0px;
+                }
+
+                input {
+                    font-family: montserrat;
+                    font-size: 1rem;
+                }
+
+                .invalid-feedback {
+                    color: red;
+                    font-family: montserrat;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    line-height: 1rem;
+                    text-transform: uppercase;
+                    padding:10px 0px;
+                }
+
+            }
+
+            .add-save {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap:1rem;
+
+                button {
+                    background: rgb(49, 158, 211);
+                    font-size: 1rem;
+                    border: 0px;
+                    font-family: montserrat;
+                    color: rgb(255, 255, 255);
+                    padding: 15px;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                a {
+                    background: #5e9cba;
+                    font-family: montserrat;
+                    font-size: 1rem;
+                    border: 0px;
+                    color: #fff;
+                    padding: 15px;
+                    cursor: pointer;
+                    border-radius: 25px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+
             }
         }
     }

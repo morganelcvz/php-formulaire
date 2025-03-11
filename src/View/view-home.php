@@ -10,27 +10,27 @@
                     <label for="site-search"><i class="fa-solid fa-magnifying-glass"></i></label>
                     <input type="search" id="site-search" name="q">
                 </div>
-                <p class="link"><i class="fa-regular fa-square-plus"></i><a href="#">Créer</a></p>
+                <p class="link"><i class="fa-regular fa-square-plus"></i><a href="./controller-creation.php">Créer</a></p>
                 <div class="nav-profile">
-                    <img src="/assets/img/users/12/profil12.png"> <a href="./controller-profile.php">Profil</a>
+                    <img src="/assets/img/users/<?= $_SESSION['user_id'] . '/' . $_SESSION['user_avatar']; ?>"> <a href="./controller-profile.php">Profil</a>
                 </div>
                 <p class="link"><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="./controller-deconnexion.php">Déconnexion</a></p>
             </div>
         </div>
         <div class="home-posts">
-        <?php foreach ($allPubli as $post) { ?>
+        <?php foreach ($allPosts as $post) { ?>
             <div class="publication">
                 <div class="top">
-                    <b>pseudonyme</b> <span><?=$post['post_timestamp'];?></span>
+                    <b><?=$post['user_pseudo'];?></b> <span><?= date("d/m/Y - H:i", $post['post_timestamp']) ?></span>
                 </div>
-                <img src="/assets/img/users/13/chien.png">
+                <img src="/assets/img/users/<?= $post['user_id'] . '/' . $post['pic_name']; ?>">
                 <div class="bottom">
                     <div class="stat">
                         <i class="fa-regular fa-heart"></i>
                         <i class="fa-regular fa-comment"></i>
                     </div>
                     <div class="desc">
-                        <span>pseudonyme</span>
+                        <span><?=$post['user_pseudo'];?></span>
                         <p><?= $post['post_description']; ?></p>
                     </div>
                     <div class="commentaire">

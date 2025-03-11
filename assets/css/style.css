@@ -6,6 +6,7 @@ body {
   /* PAGE INSCRIPTION */
   /***PAGE PROFIL INSTA***/
   /*** FEED AFPAGRAM ***/
+  /*** PAGE CREATION ***/
 }
 body .main {
   width: auto;
@@ -180,7 +181,7 @@ body .profile {
   padding: 15px;
   border-radius: 25px;
   margin: 0 auto;
-  width: 50%;
+  width: 790px;
   margin-top: 2rem;
   margin-bottom: 2rem;
   /* INFO HAUT DU PROFIL */
@@ -282,7 +283,7 @@ body .profile .profile-post .post-row .post-img {
   /* LIKE COMMENTAIRE */
 }
 body .profile .profile-post .post-row .post-img .post-stat {
-  width: 250px;
+  width: 260px;
   height: 260px;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -311,20 +312,19 @@ body .home-page {
   /*** POSTS AFPAGRAM FEED ***/
 }
 body .home-page .nav {
-  width: 30%;
+  width: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding-top: 2.5rem;
+  background: #fff;
+  height: 100vh;
 }
 body .home-page .nav .nav-home {
-  background: #fff;
-  border-radius: 25px;
-  width: 60%;
   display: flex;
   flex-direction: column;
-  padding: 0px 20px 10px 20px;
+  padding: 20px;
+  gap: 1rem;
   /* TITRE AFPAGRAM */
   /* LIENS NAVIGATION */
   /* RECHERCHE NAVIGATION */
@@ -332,7 +332,7 @@ body .home-page .nav .nav-home {
 }
 body .home-page .nav .nav-home h2 {
   font-family: montserrat;
-  font-size: 1.8rem;
+  font-size: 2rem;
   border: 0px;
   color: #319ed3;
   text-transform: uppercase;
@@ -357,6 +357,9 @@ body .home-page .nav .nav-home p i {
 body .home-page .nav .nav-home .search {
   display: flex;
   gap: 1rem;
+}
+body .home-page .nav .nav-home .search input {
+  padding: 6px;
 }
 body .home-page .nav .nav-home .nav-profile {
   display: flex;
@@ -484,7 +487,7 @@ body .home-page .home-posts .publication .bottom .add-commentaire input {
   padding: 10px;
   border: 0px;
   border-bottom: 1px solid #ccc;
-  width: 400px;
+  width: 100%;
 }
 body .home-page .home-posts .publication .bottom .add-commentaire button {
   background: #5e9cba;
@@ -497,4 +500,115 @@ body .home-page .home-posts .publication .bottom .add-commentaire button {
   border-radius: 25px;
   font-weight: 600;
   text-transform: uppercase;
+}
+body .creation {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  margin: 0 auto;
+  /* TITRE DU FORM */
+}
+body .creation h2 {
+  background: #319ed3;
+  font-family: montserrat;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  border-radius: 25px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+body .creation form {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  border-radius: 25px;
+  margin-top: -2rem;
+  z-index: 1;
+}
+body .creation form .add-photo {
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+body .creation form .add-photo label {
+  font-family: montserrat;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+body .creation form .add-photo input {
+  font-family: montserrat;
+  font-size: 1rem;
+}
+body .creation form .add-photo button {
+  border-radius: 25px;
+}
+body .creation form .add-photo .invalid-feedback {
+  color: red;
+  font-family: montserrat;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1rem;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+body .creation form .add-comment {
+  display: flex;
+  flex-direction: column;
+}
+body .creation form .add-comment label {
+  font-family: montserrat;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+body .creation form .add-comment input {
+  font-family: montserrat;
+  font-size: 1rem;
+}
+body .creation form .add-comment .invalid-feedback {
+  color: red;
+  font-family: montserrat;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1rem;
+  text-transform: uppercase;
+  padding: 10px 0px;
+}
+body .creation form .add-save {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+body .creation form .add-save button {
+  background: rgb(49, 158, 211);
+  font-size: 1rem;
+  border: 0px;
+  font-family: montserrat;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body .creation form .add-save a {
+  background: #5e9cba;
+  font-family: montserrat;
+  font-size: 1rem;
+  border: 0px;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

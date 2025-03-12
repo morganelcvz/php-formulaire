@@ -7,6 +7,7 @@ body {
   /***PAGE PROFIL INSTA***/
   /*** FEED AFPAGRAM ***/
   /*** PAGE CREATION ***/
+  /*** PAGE UN SEUL POST ***/
 }
 body .main {
   width: auto;
@@ -357,6 +358,7 @@ body .home-page .nav .nav-home p i {
 body .home-page .nav .nav-home .search {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 body .home-page .nav .nav-home .search input {
   padding: 6px;
@@ -428,7 +430,6 @@ body .home-page .home-posts .publication .bottom {
   padding: 15px;
   /* LIKE & COMMENTAIRE */
   /* DESCRIPTION DU POST */
-  /* COMMENTAIRES DU POST */
 }
 body .home-page .home-posts .publication .bottom .stat {
   display: flex;
@@ -437,6 +438,12 @@ body .home-page .home-posts .publication .bottom .stat {
 }
 body .home-page .home-posts .publication .bottom .stat i {
   font-size: 1.1rem;
+}
+body .home-page .home-posts .publication .bottom .stat span {
+  font-family: montserrat;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 body .home-page .home-posts .publication .bottom .desc {
   display: flex;
@@ -458,7 +465,13 @@ body .home-page .home-posts .publication .bottom .desc p {
   font-size: 1rem;
   color: #000;
 }
-body .home-page .home-posts .publication .bottom .commentaire {
+body .home-page .home-posts .publication .bottom .comments {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* COMMENTAIRES DU POST */
+}
+body .home-page .home-posts .publication .bottom .comments .commentaire {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -466,40 +479,50 @@ body .home-page .home-posts .publication .bottom .commentaire {
   /* PSEUDO COMMENTAIRE */
   /* COMMENTAIRE */
 }
-body .home-page .home-posts .publication .bottom .commentaire span {
+body .home-page .home-posts .publication .bottom .comments .commentaire span {
   font-family: montserrat;
   font-size: 0.9rem;
   color: #333;
   font-weight: 500;
 }
-body .home-page .home-posts .publication .bottom .commentaire p {
+body .home-page .home-posts .publication .bottom .comments .commentaire p {
   font-family: montserrat;
   font-size: 0.9rem;
   color: grey;
 }
-body .home-page .home-posts .publication .bottom .add-commentaire {
+body .home-page .home-posts .publication .bottom .comments .commentaire p a {
+  color: grey;
+  font-family: montserrat;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+body .home-page .home-posts .publication .bottom .comments .commentaire i {
+  color: grey;
+}
+body .home-page .home-posts .publication .bottom .comments .add-commentaire {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
 }
-body .home-page .home-posts .publication .bottom .add-commentaire input {
-  padding: 10px;
-  border: 0px;
-  border-bottom: 1px solid #ccc;
-  width: 100%;
-}
-body .home-page .home-posts .publication .bottom .add-commentaire button {
-  background: #5e9cba;
+body .home-page .home-posts .publication .bottom .comments .add-commentaire p {
   font-family: montserrat;
-  font-size: 0.8rem;
-  border: 0px;
-  color: #fff;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 25px;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: grey;
+}
+body .home-page .home-posts .publication .bottom .comments .add-commentaire p a {
+  color: grey;
+  font-family: montserrat;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.6s;
+}
+body .home-page .home-posts .publication .bottom .comments .add-commentaire p a:hover {
+  color: #000;
+  transition: 0.6s;
+}
+body .home-page .home-posts .publication .bottom .comments .add-commentaire i {
+  color: grey;
 }
 body .creation {
   width: auto;
@@ -611,4 +634,140 @@ body .creation form .add-save a {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
+}
+body .one-post {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .one-post .post {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  /* IMAGE DU POST */
+  /*** INFORMATIONS DU POST ***/
+}
+body .one-post .post .post-image {
+  width: 100%;
+  height: 40rem;
+  border-radius: 25px 0px 0px 25px;
+}
+body .one-post .post .left-post {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  width: 900px;
+  justify-content: space-between;
+  border-radius: 0px 25px 25px 0px;
+  /* DESCRIPTION POST SIMPLE */
+  /* TOUS LES COMMENTAIRES */
+  /* LIKES & COMMENTAIRES */
+  /* AJOUTER UN COMMENTAIRE */
+}
+body .one-post .post .left-post .post-desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 10px 10px;
+  /* AVATAR POSTEUR */
+  /* DESCRIPTION DU POST */
+}
+body .one-post .post .left-post .post-desc img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-top: 1rem;
+}
+body .one-post .post .left-post .post-desc p {
+  font-family: montserrat;
+  color: #000;
+  font-size: 1rem;
+}
+body .one-post .post .left-post .post-desc p span {
+  font-weight: bold;
+  color: #319ed3;
+}
+body .one-post .post .left-post .post-desc p b {
+  font-weight: 500;
+  color: grey;
+  font-size: 0.9rem;
+}
+body .one-post .post .left-post .post-comments {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+body .one-post .post .left-post .post-comments .comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 15px;
+  /* DATE DU COMMENTAIRE */
+}
+body .one-post .post .left-post .post-comments .comment p {
+  display: flex;
+  flex-direction: row;
+  font-family: montserrat;
+  font-size: 0.9rem;
+  color: #000;
+  gap: 0.5rem;
+  /* PSEUDO COMMENTEUR */
+  /* COMMENTAIRE */
+}
+body .one-post .post .left-post .post-comments .comment p b {
+  font-weight: 800;
+}
+body .one-post .post .left-post .post-comments .comment p span {
+  color: #000;
+  font-family: montserrat;
+  font-size: 0.9rem;
+}
+body .one-post .post .left-post .post-comments .comment span {
+  font-family: montserrat;
+  font-size: 0.8rem;
+  color: grey;
+}
+body .one-post .post .left-post .post-stats {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 15px;
+  gap: 0.8rem;
+}
+body .one-post .post .left-post .post-stats i {
+  font-size: 1.2rem;
+  color: #319ed3;
+}
+body .one-post .post .left-post .post-stats span {
+  font-family: montserrat;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+body .one-post .post .left-post .add-commentaire {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 10px;
+}
+body .one-post .post .left-post .add-commentaire input {
+  padding: 10px;
+  border: 0px;
+  width: 100%;
+}
+body .one-post .post .left-post .add-commentaire button {
+  background: #319ed3;
+  font-family: montserrat;
+  font-size: 0.8rem;
+  border: 0px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

@@ -1,5 +1,7 @@
-alpha loup : 1234 
+LoupGarou : 1234 
 
-nana : girls123
+heart2heart : girls123
 
 xav_xav : secret
+
+Chuuchou : secret 

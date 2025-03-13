@@ -83,8 +83,6 @@ $likes = $stmt->fetch(PDO::FETCH_ASSOC);
 
 $pdo = '';
 
-var_dump($likes); 
-
 
 // POSTER UN COMMENTAIRE //
 //regex pour le commentaire

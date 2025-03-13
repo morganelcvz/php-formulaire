@@ -44,13 +44,14 @@
                     </div>
                     <div class="post-stats">
                         <i class="fa-regular fa-heart"></i>
-                        <span>12</span>
+                        <span><?= $likes['total'] ?></span>
                         <i class="fa-regular fa-comment"></i>
-                        <span>2</span>
+                        <span><?= count($comments) ?></span>
                     </div>
-                    <div class="add-commentaire">
-                        <input type="text" id="comment" title="comment" name="comment" placeholder="ajouter un commentaire...">
-                        <button type="submit">commenter</button>
+                    <form class="add-commentaire" method="post" novalidate>
+                            <input type="text" id="comment" title="comment" name="comment" placeholder="<?= $errors['comment'] ?? 'écrire un commentaire...' ?>">
+                            <button type="submit">commenter</button>
+                        </form>
                     </div>
                 </div>
             </div>

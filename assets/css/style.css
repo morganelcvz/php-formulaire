@@ -448,7 +448,8 @@ body .home-page .home-posts .publication .bottom .stat span {
 body .home-page .home-posts .publication .bottom .desc {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 0.8rem;
   /* PSEUDO DESCRIPTION POST */
   /* DESCRIPTION */
@@ -459,6 +460,7 @@ body .home-page .home-posts .publication .bottom .desc span {
   color: #319ed3;
   font-weight: 600;
   text-decoration: none;
+  margin-top: 1rem;
 }
 body .home-page .home-posts .publication .bottom .desc p {
   font-family: montserrat;
@@ -497,31 +499,6 @@ body .home-page .home-posts .publication .bottom .comments .commentaire p a {
   text-decoration: none;
 }
 body .home-page .home-posts .publication .bottom .comments .commentaire i {
-  color: grey;
-}
-body .home-page .home-posts .publication .bottom .comments .add-commentaire {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem;
-}
-body .home-page .home-posts .publication .bottom .comments .add-commentaire p {
-  font-family: montserrat;
-  font-size: 0.9rem;
-  color: grey;
-}
-body .home-page .home-posts .publication .bottom .comments .add-commentaire p a {
-  color: grey;
-  font-family: montserrat;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: 0.6s;
-}
-body .home-page .home-posts .publication .bottom .comments .add-commentaire p a:hover {
-  color: #000;
-  transition: 0.6s;
-}
-body .home-page .home-posts .publication .bottom .comments .add-commentaire i {
   color: grey;
 }
 body .creation {
@@ -673,6 +650,7 @@ body .one-post .post .left-post .post-desc {
   align-items: flex-start;
   gap: 0.5rem;
   padding: 10px 10px;
+  height: 140px;
   /* AVATAR POSTEUR */
   /* DESCRIPTION DU POST */
 }
@@ -699,7 +677,8 @@ body .one-post .post .left-post .post-desc p b {
 body .one-post .post .left-post .post-comments {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 24rem;
+  overflow: auto;
 }
 body .one-post .post .left-post .post-comments .comment {
   display: flex;

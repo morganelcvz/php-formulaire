@@ -39,8 +39,6 @@
                             <div class="commentaire">
                                 <i class="fa-solid fa-comment"></i>
                                 <p><a href="./controller-post.php?post=<?= $post['post_id'] ?>">Voir tous les commentaires</a></p>
-                            </div>
-                            <div class="add-commentaire">
                                 <i class="fa-regular fa-square-plus"></i>
                                 <p><a href="./controller-post.php?post=<?= $post['post_id'] ?>">commenter</a></p>
                             </div>

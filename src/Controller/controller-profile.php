@@ -8,6 +8,9 @@ if(!isset($_SESSION['user_id'])){
 }
 
 require_once '../../config.php';
+require_once '../Model/model-following.php';
+require_once '../Model/model-followers.php';
+require_once '../Model/model-posts.php';
 
 // se connecter à la DDB via PDO (PHP DATA OBJECT) = création d'instance
 $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS); 
@@ -35,5 +38,5 @@ $pdo = '';
 
 ?>
 
-<?php include_once '../View/view-profile.php'; ?>
+<?php include_once '../View/view-profile.php' ?>
 

@@ -16,6 +16,18 @@
                 </div>
                 <p class="link"><i class="fa-solid fa-arrow-right-from-bracket"></i><a href="./controller-deconnexion.php">Déconnexion</a></p>
             </div>
+            <div class="nav-small">
+                <h2><i class="fa-solid fa-camera"></i></h2>
+                <a href="./controller-home.php"><i class="fa-solid fa-house"></i></a>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <a href="./controller-creation.php"><i class="fa-regular fa-square-plus"></i></a>
+                <div class="nav-profile">
+                <a href="./controller-profile.php"><img src="/assets/img/users/<?= $_SESSION['user_id'] . '/' . $_SESSION['user_avatar'] ?>"></a>
+                </div>
+                <a href="./controller-deconnexion.php"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
         </div>
         <div class="home-posts">
             <?php foreach ($allPosts as $post) { ?>
@@ -49,4 +61,5 @@
         </div>
     </section>
 </body>
+
 </html>

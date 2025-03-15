@@ -177,7 +177,16 @@ body .main form p {
   font-size: 1rem;
   color: #000;
 }
-body .profile {
+body .profile-page {
+  width: 80%;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body .profile-page .profile {
   background: #fff;
   padding: 15px;
   border-radius: 25px;
@@ -188,24 +197,43 @@ body .profile {
   /* INFO HAUT DU PROFIL */
   /* TOUTES LES PHOTOS */
 }
-body .profile .profile-top {
+@media (max-width: 600px) {
+  body .profile-page .profile {
+    width: 80%;
+  }
+}
+body .profile-page .profile .profile-top {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   /* PHOTO DE PROFIL */
 }
-body .profile .profile-top img {
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+}
+body .profile-page .profile .profile-top img {
   width: 180px;
   height: 180px;
   border-radius: 100%;
 }
-body .profile .profile-top .info {
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-top img {
+    display: none;
+  }
+}
+body .profile-page .profile .profile-top .info {
   display: flex;
   flex-direction: column;
+  width: 55%;
   /***NOMS & BOUTONS***/
   /*NOMBRE DE POSTS & FOLLOWERS*/
 }
-body .profile .profile-top .info button {
+body .profile-page .profile .profile-top .info button {
   font-family: montserrat;
   font-size: 0.9rem;
   border: 0px;
@@ -215,21 +243,48 @@ body .profile .profile-top .info button {
   padding: 10px;
   cursor: pointer;
 }
-body .profile .profile-top .info .profile-name {
+body .profile-page .profile .profile-top .info .profile-name {
   padding: 15px 0px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  gap: 4rem;
+  /* PHOTO DE PROFIL MOBILE */
   /* PSEUDO */
 }
-body .profile .profile-top .info .profile-name span {
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-top .info .profile-name {
+    gap: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+  }
+}
+body .profile-page .profile .profile-top .info .profile-name img {
+  display: none;
+}
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-top .info .profile-name img {
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+}
+body .profile-page .profile .profile-top .info .profile-name span {
   font-family: montserrat;
   font-size: 1.3rem;
   color: #000;
   font-weight: 600;
 }
-body .profile .profile-top .info .profile-name button {
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-top .info .profile-name span {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+}
+body .profile-page .profile .profile-top .info .profile-name .btn-big {
   font-family: montserrat;
   font-size: 0.8rem;
   font-weight: 500;
@@ -241,7 +296,30 @@ body .profile .profile-top .info .profile-name button {
   border-radius: 25px;
   text-transform: uppercase;
 }
-body .profile .profile-top .info .profile-name a {
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-top .info .profile-name .btn-big {
+    display: none;
+  }
+}
+body .profile-page .profile .profile-top .info .profile-name .btn-small {
+  display: none;
+}
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-top .info .profile-name .btn-small {
+    display: block;
+    font-family: montserrat;
+    font-size: 0.8rem;
+    font-weight: 500;
+    background: #319ed3;
+    border: 0px;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 25px;
+    text-transform: uppercase;
+  }
+}
+body .profile-page .profile .profile-top .info .profile-name a {
   font-family: montserrat;
   font-size: 0.8rem;
   font-weight: 500;
@@ -254,18 +332,25 @@ body .profile .profile-top .info .profile-name a {
   text-transform: uppercase;
   text-decoration: none;
 }
-body .profile .profile-top .info .profile-stat {
+body .profile-page .profile .profile-top .info .profile-stat {
   display: flex;
   flex-direction: row;
   gap: 2rem;
 }
-body .profile .profile-top .info .profile-stat p {
+body .profile-page .profile .profile-top .info .profile-stat p {
   font-family: montserrat;
   font-size: 1rem;
   color: #000;
   font-weight: 500;
 }
-body .profile .profile-post {
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-top .info .profile-stat p {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}
+body .profile-page .profile .profile-post {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 0.8rem;
@@ -273,17 +358,23 @@ body .profile .profile-post {
   margin-top: 1.5rem;
   /* ROW 3 PHOTOS */
 }
-body .profile .profile-post .post-row {
+body .profile-page .profile .profile-post .post-row {
   display: flex;
   flex-wrap: wrap;
   /* POST PHOTO */
 }
-body .profile .profile-post .post-row .post-img {
+body .profile-page .profile .profile-post .post-row .post-img {
   width: 260px;
   height: 260px;
   /* LIKE COMMENTAIRE */
 }
-body .profile .profile-post .post-row .post-img .post-stat {
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-post .post-row .post-img {
+    width: 100%;
+    height: 320px;
+  }
+}
+body .profile-page .profile .profile-post .post-row .post-img .post-stat {
   width: 260px;
   height: 260px;
   background: rgba(0, 0, 0, 0.5);
@@ -295,11 +386,16 @@ body .profile .profile-post .post-row .post-img .post-stat {
   align-items: center;
   gap: 1rem;
 }
-body .profile .profile-post .post-row .post-img .post-stat i {
+@media (max-width: 600px) {
+  body .profile-page .profile .profile-post .post-row .post-img .post-stat {
+    display: none;
+  }
+}
+body .profile-page .profile .profile-post .post-row .post-img .post-stat i {
   color: #fff;
   font-size: 1.2rem;
 }
-body .profile .profile-post .post-row .post-img .post-stat:hover {
+body .profile-page .profile .profile-post .post-row .post-img .post-stat:hover {
   opacity: 1;
   transition: 0.7s;
 }
@@ -319,7 +415,7 @@ body .home-page .nav {
   justify-content: flex-start;
   align-items: center;
   background: #fff;
-  height: 100vh;
+  min-height: 100vh;
 }
 body .home-page .nav .nav-home {
   display: flex;
@@ -330,6 +426,11 @@ body .home-page .nav .nav-home {
   /* LIENS NAVIGATION */
   /* RECHERCHE NAVIGATION */
   /* RETOUR PROFIL NAVIGATION */
+}
+@media (max-width: 600px) {
+  body .home-page .nav .nav-home {
+    display: none;
+  }
 }
 body .home-page .nav .nav-home h2 {
   font-family: montserrat;
@@ -382,6 +483,67 @@ body .home-page .nav .nav-home .nav-profile a {
   text-transform: uppercase;
   font-weight: 500;
 }
+body .home-page .nav .nav-small {
+  display: none;
+  /* TITRE AFPAGRAM */
+  /* LIENS NAVIGATION */
+  /* RECHERCHE NAVIGATION */
+  /* RETOUR PROFIL NAVIGATION */
+}
+@media (max-width: 600px) {
+  body .home-page .nav .nav-small {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 1.5rem;
+  }
+}
+body .home-page .nav .nav-small h2 {
+  font-family: montserrat;
+  border: 0px;
+  color: #319ed3;
+  text-transform: uppercase;
+  line-height: 1rem;
+  padding: 0px;
+}
+body .home-page .nav .nav-small h2 i {
+  font-size: 2.5rem;
+}
+body .home-page .nav .nav-small a {
+  font-family: montserrat;
+  font-size: 1.5rem;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+body .home-page .nav .nav-small i {
+  font-size: 1.5rem;
+}
+body .home-page .nav .nav-small i {
+  font-size: 1.5rem;
+}
+body .home-page .nav .nav-small .nav-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+body .home-page .nav .nav-small .nav-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+body .home-page .nav .nav-small .nav-profile a {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+}
 body .home-page .home-posts {
   width: 80%;
   height: 100vh;
@@ -400,6 +562,11 @@ body .home-page .home-posts .publication {
   /* HAUT DU POST */
   /* IMAGE DU POST*/
   /* BAS DU POST */
+}
+@media (max-width: 600px) {
+  body .home-page .home-posts .publication {
+    width: 80%;
+  }
 }
 body .home-page .home-posts .publication .top {
   padding: 20px 10px;
@@ -618,6 +785,7 @@ body .one-post {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: auto;
 }
 body .one-post .post {
   width: 75%;
@@ -626,10 +794,24 @@ body .one-post .post {
   /* IMAGE DU POST */
   /*** INFORMATIONS DU POST ***/
 }
+@media (max-width: 600px) {
+  body .one-post .post {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 body .one-post .post .post-image {
   width: 100%;
   height: 40rem;
   border-radius: 25px 0px 0px 25px;
+}
+@media (max-width: 600px) {
+  body .one-post .post .post-image {
+    border-radius: 25px 25px 0px 0px;
+    width: 100%;
+    height: 20rem;
+  }
 }
 body .one-post .post .left-post {
   display: flex;
@@ -642,6 +824,12 @@ body .one-post .post .left-post {
   /* TOUS LES COMMENTAIRES */
   /* LIKES & COMMENTAIRES */
   /* AJOUTER UN COMMENTAIRE */
+}
+@media (max-width: 600px) {
+  body .one-post .post .left-post {
+    width: 100%;
+    border-radius: 0px 0px 25px 25px;
+  }
 }
 body .one-post .post .left-post .post-desc {
   display: flex;
@@ -665,6 +853,11 @@ body .one-post .post .left-post .post-desc p {
   color: #000;
   font-size: 1rem;
 }
+@media (max-width: 600px) {
+  body .one-post .post .left-post .post-desc p {
+    font-size: 0.95rem;
+  }
+}
 body .one-post .post .left-post .post-desc p span {
   font-weight: bold;
   color: #319ed3;
@@ -680,6 +873,11 @@ body .one-post .post .left-post .post-comments {
   height: 24rem;
   overflow: auto;
 }
+@media (max-width: 600px) {
+  body .one-post .post .left-post .post-comments {
+    height: auto;
+  }
+}
 body .one-post .post .left-post .post-comments .comment {
   display: flex;
   flex-direction: column;
@@ -694,6 +892,7 @@ body .one-post .post .left-post .post-comments .comment p {
   font-size: 0.9rem;
   color: #000;
   gap: 0.5rem;
+  margin: 0px;
   /* PSEUDO COMMENTEUR */
   /* COMMENTAIRE */
 }
@@ -709,6 +908,7 @@ body .one-post .post .left-post .post-comments .comment span {
   font-family: montserrat;
   font-size: 0.8rem;
   color: grey;
+  padding-bottom: 15px;
 }
 body .one-post .post .left-post .post-stats {
   display: flex;

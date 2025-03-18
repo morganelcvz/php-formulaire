@@ -232,6 +232,7 @@ body .profile-page .profile .profile-top .info {
   width: 55%;
   /***NOMS & BOUTONS***/
   /*NOMBRE DE POSTS & FOLLOWERS*/
+  /* DESCRIPTION DU PROFIL */
 }
 body .profile-page .profile .profile-top .info button {
   font-family: montserrat;
@@ -296,6 +297,14 @@ body .profile-page .profile .profile-top .info .profile-name .btn-big {
   border-radius: 25px;
   text-transform: uppercase;
 }
+body .profile-page .profile .profile-top .info .profile-name .btn-big a {
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: montserrat;
+  color: #fff;
+  text-decoration: none;
+}
 @media (max-width: 600px) {
   body .profile-page .profile .profile-top .info .profile-name .btn-big {
     display: none;
@@ -318,19 +327,14 @@ body .profile-page .profile .profile-top .info .profile-name .btn-small {
     border-radius: 25px;
     text-transform: uppercase;
   }
-}
-body .profile-page .profile .profile-top .info .profile-name a {
-  font-family: montserrat;
-  font-size: 0.8rem;
-  font-weight: 500;
-  background: #5e9cba;
-  border: 0px;
-  color: #fff;
-  padding: 15px;
-  cursor: pointer;
-  border-radius: 25px;
-  text-transform: uppercase;
-  text-decoration: none;
+  body .profile-page .profile .profile-top .info .profile-name .btn-small a {
+    background: transparent;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: montserrat;
+    color: #fff;
+    text-decoration: none;
+  }
 }
 body .profile-page .profile .profile-top .info .profile-stat {
   display: flex;
@@ -350,6 +354,11 @@ body .profile-page .profile .profile-top .info .profile-stat p {
     gap: 0.5rem;
   }
 }
+body .profile-page .profile .profile-top .info .profile-bio p {
+  font-family: montserrat;
+  font-size: 1rem;
+  color: #000;
+}
 body .profile-page .profile .profile-post {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -364,8 +373,8 @@ body .profile-page .profile .profile-post .post-row {
   /* POST PHOTO */
 }
 body .profile-page .profile .profile-post .post-row .post-img {
-  width: 260px;
-  height: 260px;
+  width: 255px;
+  height: 255px;
   /* LIKE COMMENTAIRE */
 }
 @media (max-width: 600px) {
@@ -375,8 +384,8 @@ body .profile-page .profile .profile-post .post-row .post-img {
   }
 }
 body .profile-page .profile .profile-post .post-row .post-img .post-stat {
-  width: 260px;
-  height: 260px;
+  width: 255px;
+  height: 255px;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: 0.7s;
@@ -672,10 +681,12 @@ body .creation {
   width: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 25px;
   margin: 0 auto;
+  height: 100vh;
+  overflow: auto;
   /* TITRE DU FORM */
 }
 body .creation h2 {
@@ -858,7 +869,7 @@ body .one-post .post .left-post .post-desc p {
     font-size: 0.95rem;
   }
 }
-body .one-post .post .left-post .post-desc p span {
+body .one-post .post .left-post .post-desc p .post-name {
   font-weight: bold;
   color: #319ed3;
 }
@@ -866,6 +877,28 @@ body .one-post .post .left-post .post-desc p b {
   font-weight: 500;
   color: grey;
   font-size: 0.9rem;
+}
+body .one-post .post .left-post .post-desc p .post-edit {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+body .one-post .post .left-post .post-desc p .post-edit button {
+  border: 0px;
+  background: transparent;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #000;
+  font-family: montserrat;
+  font-weight: 500;
+  padding: 10px 0px;
+  opacity: 0.5;
+  transition: 0.6s;
+}
+body .one-post .post .left-post .post-desc p .post-edit button:hover {
+  opacity: 1;
+  transition: 0.6s;
 }
 body .one-post .post .left-post .post-comments {
   display: flex;
@@ -893,6 +926,8 @@ body .one-post .post .left-post .post-comments .comment p {
   color: #000;
   gap: 0.5rem;
   margin: 0px;
+  justify-content: flex-start;
+  align-items: flex-start;
   /* PSEUDO COMMENTEUR */
   /* COMMENTAIRE */
 }
@@ -909,6 +944,24 @@ body .one-post .post .left-post .post-comments .comment span {
   font-size: 0.8rem;
   color: grey;
   padding-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+}
+body .one-post .post .left-post .post-comments .comment span button {
+  font-family: montserrat;
+  font-weight: 500;
+  border: 0px;
+  background: transparent;
+  font-size: 0.8rem;
+  cursor: pointer;
+  opacity: 0.3;
+  text-transform: uppercase;
+  transition: 0.6s;
+}
+body .one-post .post .left-post .post-comments .comment span button:hover {
+  opacity: 1;
+  transition: 0.6s;
 }
 body .one-post .post .left-post .post-stats {
   display: flex;

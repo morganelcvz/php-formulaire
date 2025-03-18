@@ -31,24 +31,24 @@
         </div>
         <section class="creation">
 
-            <h2>nouveau post</h2>
+            <h2>éditer le profil</h2>
             <form action="" method="POST" enctype="multipart/form-data" novalidate>
 
                 <div class="add-photo">
-                    <label for="photo" class="form-label">Photo :</label>
-                    <input type="file" class="form-control" id="photo" name="photo" required>
-                    <div class="invalid-feedback"><?= $errors['photo'] ?? '' ?></div>
+                    <label for="pfp" class="form-label">Photo de profil :</label>
+                    <input type="file" class="form-control" id="pfp" name="pfp" required>
+                    <div class="invalid-feedback"><?= $errors['pfp'] ?? '' ?></div>
                 </div>
 
                 <div class="add-comment">
-                    <label for="description" class="form-label">Description :</label>
-                    <textarea class="form-control" rows="3" id="description" name="description" placeholder="Description..." required></textarea>
-                    <div class="invalid-feedback"><?= $errors['description'] ?? '' ?></div>
+                    <label for="bio" class="form-label">Description du profil :</label>
+                    <textarea class="form-control" rows="3" id="bio" name="bio" placeholder="Description..." required></textarea>
+                    <div class="invalid-feedback"><?= $errors['bio'] ?? '' ?></div>
                 </div>
 
                 <div class="add-save">
                     <button>Enregistrer</button>
-                    <a href="../Controller/controller-creation.php">Annuler</a>
+                    <a href="../Controller/controller-editprofile.php">Annuler</a>
                 </div>
             </form>
         </section>

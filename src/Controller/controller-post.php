@@ -20,7 +20,7 @@ $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
 // options activées sur notre instance
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// requete SQL me permettant de rechercher tous les posts
+// requete SQL me permettant d'afficher tous les commentaires sur un post
 $sql = "SELECT * FROM `76_posts`
 INNER JOIN `76_comments`
 ON 76_comments.post_id = 76_posts.post_id
@@ -46,7 +46,7 @@ $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
 // options activées sur notre instance
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// requete SQL me permettant de rechercher tous les posts
+// requete SQL me permettant d'afficher les informations d'un post
 $sql = "SELECT * FROM `76_posts`
 INNER JOIN `76_users` 
 ON 76_users.user_id = 76_posts.user_id 
@@ -70,7 +70,7 @@ $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
 // options activées sur notre instance
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-// requete SQL me permettant de rechercher tous les posts
+// requete SQL me permettant de compter tous les likes sur un seul post
 $sql = "SELECT COUNT(*) AS total FROM `76_likes`
 INNER JOIN `76_posts` ON 76_likes.post_id = 76_posts.post_id 
 WHERE 76_posts.post_id = " . $_GET['post'];

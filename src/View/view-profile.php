@@ -37,13 +37,16 @@
                         <div class="profile-name">
                         <img src="../../assets/img/users/<?= $_SESSION['user_id'] . '/' . $_SESSION['user_avatar'] ?>" class="p-small">
                             <span><?= $_SESSION['user_pseudo'] ?></span>
-                            <button class="btn-big">modifier le profil</button>
-                            <buttton class="btn-small"><i class="fa-solid fa-gear"></i></button>
+                            <a href="./controller-editprofile.php"><button class="btn-big">modifier le profil</button></a>
+                            <a href="./controller-editprofile.php"><buttton class="btn-small"><i class="fa-solid fa-gear"></i></button></a>
                         </div>
                         <div class="profile-stat">
                             <p><b><?= totalposts($_SESSION['user_id']) ?></b> publications</P>
                             <p><b><?= totalfollowers($_SESSION['user_id']) ?></b> followers</p>
-                            <P><b><?= totalfollowing($_SESSION['user_id']) ?></b> following</p>
+                            <P><b><?= totalfollowing($_SESSION['user_id']) ?></b> suivi(e)s</p>
+                        </div>
+                        <div class="profile-bio">
+                            <p><?= $_SESSION['user_bio'] ?></p>
                         </div>
                     </div>
                 </div>

@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (empty($_POST['description'])) {
-        $errors['description'] = 'Veuillez saisir un commentaire';
+        $errors['description'] = 'Veuillez saisir une description';
     }
 
     // var_dump($errors);

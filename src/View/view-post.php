@@ -36,11 +36,16 @@
                 <div class="left-post">
                     <div class="post-desc">
                         <img src="/assets/img/users/<?= $post['user_id'] . '/' . $post['user_avatar'] ?>">
-                        <p><span><?= $post['user_pseudo'] ?></span>
+                        <p><span class="post-name"><?= $post['user_pseudo'] ?></span>
                             <?= $post['post_description'] ?>
                             <br />
                             <br />
                             <b><?= date("d/m/Y - H:i", $post['post_timestamp']) ?></b>
+                            <br />
+                            <span class="post-edit">
+                                <button><i class="fa-solid fa-pen-to-square"></i> éditer</button>
+                                <button><i class="fa-solid fa-square-xmark"></i> supprimer</button>
+                            </span>
                         </p>
                     </div>
                     <div class="post-comments">
@@ -50,7 +55,11 @@
                                     <b><?= $comment['user_pseudo'] ?></b>
                                     <span><?= $comment['com_text'] ?></span>
                                 </p>
-                                <span><?= date("d/m/Y - H:i", $comment['com_timestamp']) ?></span>
+                                <span>
+                                    <?= date("d/m/Y - H:i", $comment['com_timestamp']) ?>
+                                    <button><i class="fa-solid fa-pen"></i> éditer</button>
+                                    <button><i class="fa-solid fa-delete-left"></i> supprimer</button>
+                                </span>
                             </div>
                         <?php } ?>
                     </div>

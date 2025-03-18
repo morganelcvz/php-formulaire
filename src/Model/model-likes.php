@@ -2,14 +2,14 @@
 
 function totallikes($post_id)
 {
-    // AFFICHAGE DES COMMENTAIRES // 
+    // AFFICHAGE DES LIKES TOTAL // 
     // connexion à la base de données via PDO (PHP Data Objects) = création instance
     $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
 
     // options activées sur notre instance
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // requete SQL me permettant de rechercher tous les posts
+    // requete SQL me permettant compter les likes d'un post
     $sql = "SELECT COUNT(*) AS total FROM 76_likes
     WHERE post_id = " . $post_id;
 

@@ -17,13 +17,13 @@ $errors = [];
 // lancement des test lors d'un POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    var_dump($_SESSION);
-    var_dump($_POST);
-    var_dump($_FILES);
+    // var_dump($_SESSION);
+    // var_dump($_POST);
+    // var_dump($_FILES);
 
-    // if ($_FILES['pfp']['error'] == 4) {
-    //     $errors['pfp'] = 'Veuillez sélecttionner une photo';
-    // }
+    if ($_FILES['pfp']['error'] == 4) {
+        $errors['pfp'] = 'Veuillez sélecttionner une photo';
+    }
 
     if (empty($_POST['bio'])) {
         $errors['bio'] = 'Veuillez saisir une description';
@@ -61,36 +61,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // Exécuter la requête
         if ($stmt->execute()){
-            header('Location: controller-profile.php'); 
-            exit;
+            $_SESSION['user_bio'] = safeInput($_POST['bio']); 
             }
 
-        // // Maintenant nous allons sauvegarder l'image dans le repertoire de l'utilisateur
+        // Maintenant nous allons sauvegarder l'image dans le repertoire de l'utilisateur
 
-        // // 1 - nous allons créer un nouveau non à notre image pour éviter les noms en doublon :
-        // $pic_name = uniqid() . '_' . basename($_FILES["pfp"]["name"]);
+        // 1 - nous allons créer un nouveau non à notre image pour éviter les noms en doublon :
+        $pic_name = uniqid() . '_' . basename($_FILES["pfp"]["name"]);
 
-        // // 2 - on stock notre requête de creation d'image avec des marqueurs nominatifs
-        // $sql = "INSERT INTO `76_users` (`pic_name`, `post_id`) VALUES (:pic_name, :post_id);";
+        // 2 - on stock notre requête de creation d'image avec des marqueurs nominatifs
+        $sql = "UPDATE `76_users` 
+                SET `user_avatar` = :avatar
+                WHERE `user_id` = :user_id";
 
-        // // 3 - on prépare la requête avant de l'exécuter
-        // $stmt = $pdo->prepare($sql);
+        // 3 - on prépare la requête avant de l'exécuter
+        $stmt = $pdo->prepare($sql);
 
-        // // on lie nos valeurs
-        // $stmt->bindValue(':pic_name', $pic_name, PDO::PARAM_STR);
-        // $stmt->bindValue(':post_id', $post_id, PDO::PARAM_INT);
+        // on lie nos valeurs
+        $stmt->bindValue(':avatar', $pic_name, PDO::PARAM_STR);
+        $stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
 
-        // // 4 - si nous arrivons à executer la requête, on va charger la photo dans le dossier de l'utilisateur
-        // if ($stmt->execute()) {
-        //     // nous allons cibler le repertoire image de l'utilisateur
-        //     $user_directory = '../../assets/img/users/' . $_SESSION['user_id'] . '/';
+        // 4 - si nous arrivons à executer la requête, on va charger la photo dans le dossier de l'utilisateur
+        if ($stmt->execute()) {
+            // nous allons cibler le repertoire image de l'utilisateur
+            $user_directory = '../../assets/img/users/' . $_SESSION['user_id'] . '/';
 
-        //     // on va enregistrer notre image avec le même nom que celle dans notre bdd
-        //     move_uploaded_file($_FILES["pfp"]["tmp_name"], $user_directory . $user_avatar);
-
-        //     header('Location: controller-profile.php'); 
-        //     exit;
-        // }
+            // on va enregistrer notre image avec le même nom que celle dans notre bdd
+            move_uploaded_file($_FILES["pfp"]["tmp_name"], $user_directory . $pic_name);
+            $_SESSION['user_avatar'] = $pic_name; 
+            header('Location: controller-profile.php'); 
+            exit;
+        }
 
         $pdo = '';
     }

@@ -42,7 +42,7 @@
 
                 <div class="add-comment">
                     <label for="bio" class="form-label">Description du profil :</label>
-                    <textarea class="form-control" rows="3" id="bio" name="bio" placeholder="Description..." required></textarea>
+                    <textarea class="form-control" rows="3" id="bio" name="bio" placeholder="Description..." required><?= $_SESSION['user_bio'] ?></textarea>
                     <div class="invalid-feedback"><?= $errors['bio'] ?? '' ?></div>
                 </div>
 

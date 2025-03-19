@@ -20,9 +20,15 @@ $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
 // options activées sur notre instance
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+$sqlFav = "SELECT GROUP_CONCAT(fav_id) FROM 76_favorites WHERE `user_id` = " . $_SESSION['user_id'] . " GROUP BY `user_id`";
+
+$favorites = $pdo->query($sqlFav);
+
+$fav = $favorites->fetchColumn(); 
+
 // requete SQL me permettant de rechercher tous les posts
-$sql = "SELECT * FROM `76_posts` NATURAL JOIN `76_users` NATURAL JOIN `76_pictures` WHERE `user_id` IN (
-(SELECT GROUP_CONCAT(fav_id) FROM 76_favorites WHERE `user_id` = " . $_SESSION['user_id'] . " GROUP BY `user_id`)," . $_SESSION['user_id'] . ") ORDER BY `post_timestamp` DESC;";
+$sql = "SELECT * FROM `76_posts` NATURAL JOIN `76_users` NATURAL JOIN `76_pictures` WHERE `user_id` IN (" . $fav . "," .
+$_SESSION['user_id'] . ") ORDER BY `post_timestamp` DESC;";
 
 // on prepare la requete pour se prémunir des injections SQL
 $stmt = $pdo->query($sql);

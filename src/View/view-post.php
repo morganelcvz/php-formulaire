@@ -43,8 +43,12 @@
                             <b><?= date("d/m/Y - H:i", $post['post_timestamp']) ?></b>
                             <br />
                             <span class="post-edit">
-                                <button><i class="fa-solid fa-pen-to-square"></i> éditer</button>
-                                <button><i class="fa-solid fa-square-xmark"></i> supprimer</button>
+                                <button>
+                                    <i class="fa-solid fa-pen-to-square"></i> éditer
+                                </button>
+                                <a href="./controller-delete_posts.php?post_id=<?= $post['post_id'] ?>">
+                                    <button><i class="fa-solid fa-square-xmark"></i> supprimer</button>
+                                </a>
                             </span>
                         </p>
                     </div>
@@ -57,8 +61,12 @@
                                 </p>
                                 <span>
                                     <?= date("d/m/Y - H:i", $comment['com_timestamp']) ?>
-                                    <button><i class="fa-solid fa-pen"></i> éditer</button>
-                                    <button><i class="fa-solid fa-delete-left"></i> supprimer</button>
+                                    <button>
+                                        <i class="fa-solid fa-pen"></i> éditer
+                                    </button>
+                                    <a href="./controller-delete_comments.php?post_id=<?= $comment['post_id'] ?>&com_id=<?= $comment['com_id'] ?>">
+                                        <button><i class="fa-solid fa-delete-left"></i> supprimer</button>
+                                    </a>
                                 </span>
                             </div>
                         <?php } ?>

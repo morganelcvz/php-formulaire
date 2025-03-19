@@ -1,6 +1,8 @@
 <?php
 
-function totalcomments($post_id)
+class Comments {
+
+public static function totalcomments($post_id) 
 {
     // AFFICHAGE DES COMMENTAIRES TOTAL // 
     // connexion à la base de données via PDO (PHP Data Objects) = création instance
@@ -24,4 +26,30 @@ function totalcomments($post_id)
     return $comments['total'];
 }
 
-?>
+public static function deletecomment($com_id, $user_id)
+{
+    // SUPPRIMER UN COMMENTAIRE // 
+    // connexion à la base de données via PDO (PHP Data Objects) = création instance
+    $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8', DB_USER, DB_PASS);
+
+    // options activées sur notre instance
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // requete SQL me permettant de supprimer un commentaire sur un post
+    $sql = "DELETE FROM `76_comments` 
+    WHERE `user_id` = :user_id AND `com_id` = :com_id";
+
+    $stmt = $pdo->prepare($sql);
+
+    // on bind la valeur du post 
+    $stmt->bindValue(':user_id', $user_id, PDO::PARAM_STR);
+    $stmt->bindValue(':com_id', $com_id, PDO::PARAM_STR);
+
+    // on execute la requete 
+    $stmt->execute();
+
+    $pdo = '';
+    
+}
+
+}

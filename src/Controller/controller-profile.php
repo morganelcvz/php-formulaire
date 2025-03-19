@@ -8,8 +8,7 @@ if(!isset($_SESSION['user_id'])){
 }
 
 require_once '../../config.php';
-require_once '../Model/model-following.php';
-require_once '../Model/model-followers.php';
+require_once '../Model/model-favorites.php';
 require_once '../Model/model-posts.php';
 
 // se connecter à la DDB via PDO (PHP DATA OBJECT) = création d'instance

@@ -1,6 +1,8 @@
 <?php
 
-function totallikes($post_id)
+class Likes {
+
+public static function totallikes($post_id)
 {
     // AFFICHAGE DES LIKES TOTAL // 
     // connexion à la base de données via PDO (PHP Data Objects) = création instance
@@ -22,6 +24,8 @@ function totallikes($post_id)
     $pdo = '';
 
     return $likehome['total'];
+}
+
 }
 
 ?>

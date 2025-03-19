@@ -41,9 +41,9 @@
                             <a href="./controller-editprofile.php"><buttton class="btn-small"><i class="fa-solid fa-gear"></i></button></a>
                         </div>
                         <div class="profile-stat">
-                            <p><b><?= totalposts($_SESSION['user_id']) ?></b> publications</P>
-                            <p><b><?= totalfollowers($_SESSION['user_id']) ?></b> followers</p>
-                            <P><b><?= totalfollowing($_SESSION['user_id']) ?></b> suivi(e)s</p>
+                            <p><b><?= Posts::totalposts($_SESSION['user_id']) ?></b> publications</P>
+                            <p><b><?= Favorites::totalfollowers($_SESSION['user_id']) ?></b> followers</p>
+                            <P><b><?= Favorites::totalfollowing($_SESSION['user_id']) ?></b> suivi(e)s</p>
                         </div>
                         <div class="profile-bio">
                             <p><?= $_SESSION['user_bio'] ?></p>

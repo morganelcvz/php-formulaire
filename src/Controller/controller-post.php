@@ -141,7 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header('Location: controller-post.php?post='.$_GET['post']); 
             exit;
             }
-        
+            
     }
 }
 

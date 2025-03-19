@@ -39,9 +39,9 @@
                     <div class="bottom">
                         <div class="stat">
                             <i class="fa-regular fa-heart"></i>
-                            <span><?= totallikes($post['post_id']) ?></span>
+                            <span><?= Likes::totallikes($post['post_id']) ?></span>
                             <i class="fa-regular fa-comment"></i>
-                            <span><?= totalcomments($post['post_id']) ?></span>
+                            <span><?= Comments::totalcomments($post['post_id']) ?></span>
                         </div>
                         <div class="desc">
                             <span><?= $post['user_pseudo'] ?></span>

@@ -41,6 +41,12 @@
                 </div>
 
                 <div class="add-comment">
+                    <label for="bio" class="form-label">Pseudo :</label>
+                    <input type="text" id="pseudo" name="pseudo" value="<?= $_SESSION['user_pseudo'] ?>" required>
+                    <div class="invalid-feedback"><?= $errors['pseudo'] ?? '' ?></div>
+                </div>
+
+                <div class="add-comment">
                     <label for="bio" class="form-label">Description du profil :</label>
                     <textarea class="form-control" rows="3" id="bio" name="bio" placeholder="Description..." required><?= $_SESSION['user_bio'] ?></textarea>
                     <div class="invalid-feedback"><?= $errors['bio'] ?? '' ?></div>

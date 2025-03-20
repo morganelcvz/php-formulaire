@@ -32,13 +32,15 @@
         <section class="profile-page">
             <section class="profile">
                 <div class="profile-top">
-                <img src="../../assets/img/users/<?= $_SESSION['user_id'] . '/' . $_SESSION['user_avatar'] ?>" class="p-large">
+                    <img src="../../assets/img/users/<?= $_SESSION['user_id'] . '/' . $_SESSION['user_avatar'] ?>" class="p-large">
                     <div class="info">
                         <div class="profile-name">
-                        <img src="../../assets/img/users/<?= $_SESSION['user_id'] . '/' . $_SESSION['user_avatar'] ?>" class="p-small">
+                            <img src="../../assets/img/users/<?= $_SESSION['user_id'] . '/' . $_SESSION['user_avatar'] ?>" class="p-small">
                             <span><?= $_SESSION['user_pseudo'] ?></span>
                             <a href="./controller-editprofile.php"><button class="btn-big">modifier le profil</button></a>
-                            <a href="./controller-editprofile.php"><buttton class="btn-small"><i class="fa-solid fa-gear"></i></button></a>
+                            <a href="./controller-editprofile.php">
+                                <buttton class="btn-small"><i class="fa-solid fa-gear"></i></button>
+                            </a>
                         </div>
                         <div class="profile-stat">
                             <p><b><?= Posts::totalposts($_SESSION['user_id']) ?></b> publications</P>
@@ -55,10 +57,12 @@
                     <?php foreach ($allPosts as $post) { ?>
                         <div class="post-row">
                             <div class="post-img" style="background:url(../../assets/img/users/<?= $post['user_id'] . '/' . $post['pic_name'] ?>);background-size:cover;background-position:center;">
-                                <div class="post-stat">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-regular fa-comment"></i>
-                                </div>
+                                <a href="./controller-post.php?post=<?= $post['post_id'] ?>">
+                                    <div class="post-stat">
+                                        <i class="fa-regular fa-heart"></i>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     <?php } ?>

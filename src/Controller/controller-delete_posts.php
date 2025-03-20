@@ -1,9 +1,10 @@
-<?php 
+<?php
 
 session_start();
 
 require_once '../../config.php';
 require_once '../Model/model-posts.php';
+require_once '../Model/model-pictures.php';
 
 // on controle si la personne est bien loggée
 if (!isset($_SESSION['user_id'])) {
@@ -16,10 +17,10 @@ $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     if (isset($_GET['post_id'])) {
-        Posts::deletepost($_GET['post_id'], $_SESSION['user_id']); 
-        header('Location: controller-home.php'); 
-        exit; 
+        $pic_name = Pictures::getPicname($_GET['post_id']);
+        Posts::deletepost($_GET['post_id'], $_SESSION['user_id']);
+        unlink("../../assets/img/users/" . $_SESSION['user_id'] . "/" . $pic_name);
+        header('Location: controller-home.php');
+        exit;
     }
 }
-
-?>

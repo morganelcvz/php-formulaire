@@ -24,11 +24,14 @@ $sqlFav = "SELECT GROUP_CONCAT(fav_id) FROM 76_favorites WHERE `user_id` = " . $
 
 $favorites = $pdo->query($sqlFav);
 
-$fav = $favorites->fetchColumn(); 
+if ($favorites->fetchColumn()) {
+    $fav = $favorites->fetchColumn() . ",";
+} else {
+    $fav = ""; 
+}
 
 // requete SQL me permettant de rechercher tous les posts
-$sql = "SELECT * FROM `76_posts` NATURAL JOIN `76_users` NATURAL JOIN `76_pictures` WHERE `user_id` IN (" . $fav . "," .
-$_SESSION['user_id'] . ") ORDER BY `post_timestamp` DESC;";
+$sql = "SELECT * FROM `76_posts` NATURAL JOIN `76_users` NATURAL JOIN `76_pictures` WHERE `user_id` IN (" . $fav . $_SESSION['user_id'] . ") ORDER BY `post_timestamp` DESC;";
 
 // on prepare la requete pour se prémunir des injections SQL
 $stmt = $pdo->query($sql);

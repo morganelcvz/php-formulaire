@@ -411,30 +411,34 @@ body {
                         }
 
                         /* LIKE COMMENTAIRE */
-                        .post-stat {
-                            width: 255px;
-                            height: 255px;
-                            background: rgba(0, 0, 0, 0.5);
-                            opacity: 0;
-                            transition: 0.7s;
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            gap: 1rem;
+                        a {
+                            text-decoration: none;
 
-                            @media (max-width: 600px) {
-                                display: none;
-                            }
-
-                            i {
-                                color: #fff;
-                                font-size: 1.2rem;
-                            }
-
-                            &:hover {
-                                opacity: 1;
+                            .post-stat {
+                                width: 255px;
+                                height: 255px;
+                                background: rgba(0, 0, 0, 0.5);
+                                opacity: 0;
                                 transition: 0.7s;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 1rem;
+
+                                @media (max-width: 600px) {
+                                    display: none;
+                                }
+
+                                i {
+                                    color: #fff;
+                                    font-size: 1.2rem;
+                                }
+
+                                &:hover {
+                                    opacity: 1;
+                                    transition: 0.7s;
+                                }
                             }
                         }
                     }

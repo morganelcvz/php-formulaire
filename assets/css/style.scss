@@ -847,6 +847,10 @@ body {
                     font-size: 1rem;
                 }
 
+                textarea {
+                    resize:none;
+                }
+
                 .invalid-feedback {
                     color: red;
                     font-family: montserrat;

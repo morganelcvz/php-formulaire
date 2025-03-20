@@ -30,8 +30,7 @@
             </div>
         </div>
         <section class="creation">
-
-            <h2>éditer le profil</h2>
+            <h2>éditer le profil</h2> 
             <form action="" method="POST" enctype="multipart/form-data" novalidate>
 
                 <div class="add-photo">

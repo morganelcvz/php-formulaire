@@ -753,6 +753,9 @@ body .creation form .add-comment input {
   font-family: montserrat;
   font-size: 1rem;
 }
+body .creation form .add-comment textarea {
+  resize: none;
+}
 body .creation form .add-comment .invalid-feedback {
   color: red;
   font-family: montserrat;

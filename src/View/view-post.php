@@ -67,9 +67,9 @@
                                     <?= date("d/m/Y - H:i", $comment['com_timestamp']) ?>
                                     <?php if ($comment['user_id'] == $_SESSION['user_id']) { ?>
                                         <a href="#">
-                                        <button>
-                                            <i class="fa-solid fa-pen"></i> éditer
-                                        </button>
+                                            <button>
+                                                <i class="fa-solid fa-pen"></i> éditer
+                                            </button>
                                         </a>
                                         <a href="./controller-delete_comments.php?post_id=<?= $comment['post_id'] ?>&com_id=<?= $comment['com_id'] ?>">
                                             <button><i class="fa-solid fa-delete-left"></i> supprimer</button>
@@ -79,8 +79,17 @@
                             </div>
                         <?php } ?>
                     </div>
+
                     <div class="post-stats">
-                        <i class="fa-regular fa-heart"></i>
+                        <?php if (Likes::alreadyLiked($post['post_id'])) { ?>
+                            <button data-postlike="<?= $post['post_id'] ?>">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        <?php } else { ?>
+                            <button data-postlike="<?= $post['post_id'] ?>">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        <?php } ?>
                         <span><?= $likes['total'] ?></span>
                         <i class="fa-regular fa-comment"></i>
                         <span><?= count($comments) ?></span>

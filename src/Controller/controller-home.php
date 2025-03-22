@@ -20,15 +20,19 @@ $pdo = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
 // options activées sur notre instance
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+// requete SQL me permettant de rechercher tous les posts
+ 
+// ANCIENNE REQUETE 
+// $sql = "SELECT * FROM `76_posts` NATURAL JOIN `76_users` NATURAL JOIN `76_pictures` WHERE `user_id` IN (
+//  (SELECT GROUP_CONCAT(fav_id) FROM 76_favorites WHERE `user_id` = " . $_SESSION['user_id'] . " GROUP BY `user_id`)," . $_SESSION['user_id'] . ") ORDER BY `post_timestamp` DESC;";
+
 $sqlFav = "SELECT GROUP_CONCAT(fav_id) FROM 76_favorites WHERE `user_id` = " . $_SESSION['user_id'] . " GROUP BY `user_id`";
 
 $favorites = $pdo->query($sqlFav);
 
-if ($favorites->fetchColumn()) {
-    $fav = $favorites->fetchColumn() . ",";
-} else {
-    $fav = ""; 
-}
+$fav = $favorites->fetchColumn();
+
+$fav == false ? $fav = '' : $fav = $fav . ','; 
 
 // requete SQL me permettant de rechercher tous les posts
 $sql = "SELECT * FROM `76_posts` NATURAL JOIN `76_users` NATURAL JOIN `76_pictures` WHERE `user_id` IN (" . $fav . $_SESSION['user_id'] . ") ORDER BY `post_timestamp` DESC;";

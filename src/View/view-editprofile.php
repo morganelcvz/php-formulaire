@@ -33,6 +33,7 @@
             <h2>éditer le profil</h2> 
             <form action="" method="POST" enctype="multipart/form-data" novalidate>
 
+            <img src="#" alt="" id="imagePreview" style="max-width: 300px; margin-top: 20px;">
                 <div class="add-photo">
                     <label for="pfp" class="form-label">Photo de profil :</label>
                     <input type="file" class="form-control" id="pfp" name="pfp" required>
@@ -58,6 +59,23 @@
             </form>
         </section>
     </section>
+    <script>
+            // L'image img#image
+    var image = document.getElementById("imagePreview");
+     
+     // La fonction previewPicture
+     var previewPicture  = function (e) {
+ 
+         // e.files contient un objet FileList
+         const [picture] = e.files
+ 
+         // "picture" est un objet File
+         if (picture) {
+             // On change l'URL de l'image
+             image.src = URL.createObjectURL(picture)
+         }
+     } 
+    </script>
 </body>
 
 </html>

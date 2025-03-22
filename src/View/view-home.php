@@ -38,7 +38,15 @@
                     <img src="/assets/img/users/<?= $post['user_id'] . '/' . $post['pic_name'] ?>">
                     <div class="bottom">
                         <div class="stat">
-                            <i class="fa-regular fa-heart"></i>
+                        <?php if (Likes::alreadyLiked($post['post_id'])) { ?>
+                            <button data-postlike="<?= $post['post_id'] ?>">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        <?php } else { ?>
+                            <button data-postlike="<?= $post['post_id'] ?>">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        <?php } ?>
                             <span><?= Likes::totallikes($post['post_id']) ?></span>
                             <i class="fa-regular fa-comment"></i>
                             <span><?= Comments::totalcomments($post['post_id']) ?></span>

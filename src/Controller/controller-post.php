@@ -3,6 +3,7 @@
 session_start();
 
 require_once '../../config.php';
+require_once '../Model/model-likes.php';
 
 // on controle si la personne est bien loggée
 if (!isset($_SESSION['user_id'])) {

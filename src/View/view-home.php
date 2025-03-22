@@ -47,7 +47,7 @@
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         <?php } ?>
-                            <span><?= Likes::totallikes($post['post_id']) ?></span>
+                            <span id="likespost<?= $post['post_id'] ?>"><?= Likes::totallikes($post['post_id']) ?></span>
                             <i class="fa-regular fa-comment"></i>
                             <span><?= Comments::totalcomments($post['post_id']) ?></span>
                         </div>

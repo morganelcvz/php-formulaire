@@ -49,4 +49,5 @@ class Likes
         $pdo = '';
         return $like;
     }
+    
 }

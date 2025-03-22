@@ -90,7 +90,7 @@
                                 <i class="fa-regular fa-heart"></i>
                             </button>
                         <?php } ?>
-                        <span><?= $likes['total'] ?></span>
+                        <span id="likespost<?= $post['post_id'] ?>"><?= $likes['total'] ?></span>
                         <i class="fa-regular fa-comment"></i>
                         <span><?= count($comments) ?></span>
                     </div>

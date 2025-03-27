@@ -71,7 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $_SESSION['user_bio'] = safeInput($_POST['bio']);
             }
 
-
             if ($_POST['pseudo'] != $_SESSION['user_pseudo']) {
 
                 $sql = "UPDATE `76_users` 

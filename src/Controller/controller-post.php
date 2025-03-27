@@ -4,6 +4,7 @@ session_start();
 
 require_once '../../config.php';
 require_once '../Model/model-likes.php';
+require_once '../Model/model-posts.php'; 
 
 // on controle si la personne est bien loggée
 if (!isset($_SESSION['user_id'])) {
@@ -113,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             user_id, 
             com_timestamp
             )
-            VALUES (
+            VALUES ( 
             :comtext,
             :postid,
             :userid,

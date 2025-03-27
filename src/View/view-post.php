@@ -1,4 +1,5 @@
 <?php include_once '../../templates/head.php' ?>
+<link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.css">
 
 <body>
     <section class="home-page">
@@ -44,7 +45,7 @@
                             <br />
                             <?php if ($post['user_id'] == $_SESSION['user_id']) { ?>
                                 <span class="post-edit">
-                                    <a href="#">
+                                    <a href="">
                                         <button>
                                             <i class="fa-solid fa-pen-to-square"></i> éditer
                                         </button>
@@ -66,11 +67,10 @@
                                 <span>
                                     <?= date("d/m/Y - H:i", $comment['com_timestamp']) ?>
                                     <?php if ($comment['user_id'] == $_SESSION['user_id']) { ?>
-                                        <a href="#">
-                                            <button>
-                                                <i class="fa-solid fa-pen"></i> éditer
-                                            </button>
-                                        </a>
+                                        <button>
+                                            <i class="fa-solid fa-pen"></i> éditer
+                                            <div id="main"></div>
+                                        </button>
                                         <a href="./controller-delete_comments.php?post_id=<?= $comment['post_id'] ?>&com_id=<?= $comment['com_id'] ?>">
                                             <button><i class="fa-solid fa-delete-left"></i> supprimer</button>
                                         </a>
@@ -102,7 +102,46 @@
             </div>
         </div>
         </div>
-    </section>
+
+        <script>
+class ExampleApp extends React.Component {
+  constructor () {
+    super();
+    this.state = {
+      showModal: false
+    };
+    
+    this.handleOpenModal = this.handleOpenModal.bind(this);
+    this.handleCloseModal = this.handleCloseModal.bind(this);
+  }
+  
+  handleOpenModal () {
+    this.setState({ showModal: true });
+  }
+  
+  handleCloseModal () {
+    this.setState({ showModal: false });
+  }
+  
+  render () {
+    return (
+      <div>
+        <button onClick={this.handleOpenModal}>Trigger Modal</button>
+        <ReactModal 
+           isOpen={this.state.showModal}
+           contentLabel="Minimal Modal Example"
+        >
+          <button onClick={this.handleCloseModal}>Close Modal</button>
+        </ReactModal>
+      </div>
+    );
+  }
+}
+
+const props = {};
+
+ReactDOM.render(<ExampleApp {...props} />, document.getElementById('main'))
+        </script>
 </body>
 
 </html>
